@@ -11,11 +11,13 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container'; 
 import DemoFormContainer from './session_form/demo_form_container'; 
 import { AuthRoute, ProtectedRoute} from '../util/route_util'; 
+import CovidBanner from './covid-banner'; 
 
 
 const App = () => (
     <div>
         <header>
+            <CovidBanner />
             <NavBarContainer />
         </header>
 

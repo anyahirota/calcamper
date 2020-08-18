@@ -8,16 +8,16 @@ class NavBar extends React.Component {
             <ul className="nav-button-list">
                 <li className="nav-buttons"><Link to="/login">Log in</Link></li>
                 <li className="nav-buttons"><Link to="/signup">Sign up</Link></li>
-                <li className="demo-button"><Link to="/demo">Demo</Link></li>
+                <li className="demo-button"><Link to="/demo">Demo Login</Link></li>
             </ul>
         );
         const loggedIn = () => (
-            <ul className="nav-button-list">
+            <ul className="nav-button-list-logged">
                 <li className="nav-buttons">Trips</li>
                 <li className="nav-buttons">Saves</li>
                 <li className="bear-dropdown-button">
                     <p>icon</p>
-                    <ul className="bear-dropdown" >
+                    <ul className="bear-dropdown hidden" >
                         <li>
                             <button className="dropdown-button" onClick={this.props.logout}>Log Out</button>
                         </li>
@@ -31,9 +31,13 @@ class NavBar extends React.Component {
     render() {
         return (
             <nav className="nav-bar">
-                <h1 className="logo">
-                    LOGO
-                </h1>
+                <div className="logo">
+                    <Link to="/">
+                        <h1 className="logo-placeholder">
+                            LOGO
+                        </h1>
+                    </Link>
+                </div>
                 {this.navButtons()}
             </nav>
         )

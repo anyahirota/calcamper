@@ -1,0 +1,13 @@
+.covid-banner {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark-purple;
+    color: white
+}
+
+.covid-acknowledgement {
+    font-family: $sans-serif;
+    font-size: 12px;
+}

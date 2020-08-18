@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -26,13 +27,13 @@ class SessionForm extends React.Component {
                     <input type="text" 
                         value={this.state.first_name} 
                         onChange={this.update("first_name")}
-                        className="login-input"
+                        className="login-input-name"
                         onClick={this.clearInput("first_name")}
                     />
                     <input type="text"
                         value={this.state.last_name}
                         onChange={this.update("last_name")}
-                        className="login-input"
+                        className="login-input-name"
                         onClick={this.clearInput("last_name")}
                     />
                     <br/>
@@ -64,7 +65,7 @@ class SessionForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="errors">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -85,10 +86,10 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h1 className="form-header-message">{this.props.headerMessage}</h1>
-                    
-                    <h3 className="form-header-submessage">{this.props.headerSubMessage}</h3>
-                    
+                    <div className="form-messages">
+                        <p className="form-header-message">{this.props.headerMessage}</p>
+                        <p className="form-header-submessage">{this.props.headerSubMessage}</p>
+                    </div>
                     {this.renderErrors()}
                     
                     <div className="login-form">
@@ -115,6 +116,7 @@ class SessionForm extends React.Component {
                         <p>{this.props.navLink}</p>
                     </div>
                 </form>
+                <Link to="/"><div className="modal-screen"></div></Link>
             </div>
         )
     }

@@ -1,0 +1,74 @@
+.modal-screen { 
+    z-index: 11;
+    position: fixed;
+    background: white;
+    opacity: 0.6;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.login-form-box {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -220px;
+  width: 330px;
+  padding: 15px;
+  background: #fff;
+  z-index: 12;
+  border: 1px solid $border-light-grey;
+}
+
+.login-form-container {
+    font-family: $sans-serif;
+}
+
+.form-messages {
+    text-align: center;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+
+.form-header-message {
+    font-size: 22px;
+    font-weight: 600;
+    color: $text-black;
+    padding-bottom: 10px;
+}
+
+.form-header-submessage {
+    font-size: 15px;
+    font-weight: 200;
+    color: $grey; 
+}
+
+.errors {
+    text-align: center;
+    font-family: $sans-serif;
+    padding: 5px;
+    color: $pinkish-red; 
+}
+
+.login-form {
+
+}
+
+.login-input {
+    border: 1px solid $text-black;
+    height: 50px; 
+    width: 300px;
+    padding: 16px; 
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.login-input-name {
+    border: 1px solid $text-black;
+    height: 50px; 
+    width: 300px;
+    padding: 16px; 
+    margin-bottom: 10px;
+    font-weight: 600;
+}

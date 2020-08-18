@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import logo from '../../../app/assets/images/nav_bar_imgs/logo.png'; 
+
 
 class NavBar extends React.Component {
 
@@ -17,9 +17,12 @@ class NavBar extends React.Component {
                 <li className="nav-buttons">Trips</li>
                 <li className="nav-buttons">Saves</li>
                 <li className="bear-dropdown-button">
-                    <p>icon</p>
+                    <div className="bear-icon">
+                        <img src={window.reddishBear} alt="Logo" />
+                    </div>
                     <div className="bear-dropdown hidden" >
                         <div className="arrow"></div>
+                        <div className="empty-arrow"></div>
                         <ul className="bear-dropdown-ul">
                             <li>
                                 <button className="dropdown-button" onClick={this.props.logout}>Log Out</button>
@@ -34,17 +37,18 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <nav className="nav-bar">
-                <div className="logo">
-                    <Link to="/">
-                        <div className="logo-placeholder">
-                            LOGO
-                            {/* <img src={logo} alt="Logo" /> */}
-                        </div>
-                    </Link>
-                </div>
-                {this.navButtons()}
-            </nav>
+            <div>
+                <nav className="nav-bar">
+                    <div className="logo">
+                        <Link to="/">
+                            <div className="logo-placeholder">
+                                <img src={window.logoURL} alt="Logo"/>
+                            </div>
+                        </Link>
+                    </div>
+                    {this.navButtons()}
+                </nav>
+            </div>
         )
     }
 }

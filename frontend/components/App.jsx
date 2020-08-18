@@ -10,6 +10,7 @@ import NavBarContainer from './navbar/navbar_container';
 import LoginFormContainer from './session_form/login_form_container'; 
 import SignupFormContainer from './session_form/signup_form_container'; 
 import DemoFormContainer from './session_form/demo_form_container'; 
+import { AuthRoute, ProtectedRoute} from '../util/route_util'; 
 
 
 const App = () => (
@@ -18,9 +19,9 @@ const App = () => (
             <NavBarContainer />
         </header>
 
-        <Route path="/login" component={LoginFormContainer} />
-        <Route path="/signup" component={SignupFormContainer} />
-        <Route path="/demo" component={DemoFormContainer} />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <AuthRoute exact path="/demo" component={DemoFormContainer} />
     </div>
 );
 

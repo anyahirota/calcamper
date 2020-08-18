@@ -40,6 +40,7 @@
 
 .nav-buttons:hover {
     border-bottom: 2px solid $turquoise;
+    
 }
 
 .demo-button {
@@ -63,11 +64,30 @@
 
 .bear-dropdown {
     position: absolute;
+    right: 0px
+}
+
+.arrow {
+    height: 20px; 
+    width: 20;
+    border: 1px solid $border-light-grey;
+}
+
+.bear-dropdown-ul {
+    // position: absolute;
+    border: 1px solid $border-light-grey; 
+    width: 200px; 
+    // right: 0px;
+    padding: 20px;
+    // top: 40px; 
+
 }
 
 .bear-dropdown-button:hover > .bear-dropdown {
     display: block; 
+
 }
+
 
 
 

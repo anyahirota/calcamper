@@ -98,6 +98,13 @@
     font-size: 17.5px;
     font-weight: 400;
     margin-left: 15px;
+    
+}
+
+.login-button:hover {
+    margin-top: 7px;
+    margin-bottom: 3px;
+    box-shadow: 1px 1px 10px 1px rgba(117, 117, 117, 0.2);
 }
 
 .alternative-login-link {

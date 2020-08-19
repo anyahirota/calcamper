@@ -47,6 +47,8 @@ class NavBar extends React.Component {
                         </Link>
                     </div>
                     {this.navButtons()}
+                    
+                    
                 </nav>
             </div>
         )

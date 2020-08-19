@@ -37,7 +37,7 @@ const FooterContent = () => {
 
             <div className="footer-app-overview">
                 <p>CalCamper is inspired by and designed in the spirit of Hipcamp.</p>
-
+                <p>Description of Site...</p>
             </div>
             
         </div>

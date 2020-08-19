@@ -2,7 +2,7 @@
     z-index: 11;
     position: fixed;
     background: white;
-    opacity: 0.6;
+    opacity: 0.8;
     top: 0;
     bottom: 0;
     left: 0;
@@ -10,15 +10,16 @@
 }
 
 .login-form-box {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  margin-left: -220px;
-  width: 330px;
-  padding: 15px;
-  background: #fff;
-  z-index: 12;
-  border: 1px solid $border-light-grey;
+    box-sizing: border-box;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -165px;
+    width: 330px;
+    background: #fff;
+    z-index: 12;
+    // box-shadow: 10px 10px 10px rgba(235, 235, 235, 0.9);
+    box-shadow: 1px 1px 10px 5px rgba(117, 117, 117, 0.2);
 }
 
 .login-form-container {
@@ -27,8 +28,9 @@
 
 .form-messages {
     text-align: center;
-    padding-top: 5px;
+    padding-top: 20px;
     margin-bottom: 20px;
+    margin-left: 15px;
 }
 
 .form-header-message {
@@ -40,7 +42,7 @@
 
 .form-header-submessage {
     font-size: 15px;
-    font-weight: 200;
+    font-weight: 250;
     color: $grey; 
 }
 
@@ -49,26 +51,89 @@
     font-family: $sans-serif;
     padding: 5px;
     color: $pinkish-red; 
+    margin-left: 15px;
 }
 
-// .login-form {
-
-// }
-
 .login-input {
+    box-sizing: border-box;
     border: 1px solid $text-black;
-    height: 50px; 
+    height: 68px; 
     width: 300px;
     padding: 16px; 
     margin-bottom: 10px;
     font-weight: 600;
+    font-size: 16px;
+    margin-left: 15px;
 }
 
 .login-input-name {
+    box-sizing: border-box;
     border: 1px solid $text-black;
-    height: 50px; 
-    width: 300px;
+    height: 68px; 
+    width: 145px;
     padding: 16px; 
     margin-bottom: 10px;
     font-weight: 600;
+    font-size: 16px;
+}
+
+.first-last-names-inputs {
+    width: 300px;
+    margin-left: 15px;
+}
+
+.first-last-names-inputs > :first-child {
+    margin-right: 8px;
+}
+
+
+.login-button {
+    margin-top: 10px;
+    width: 300px; 
+    height: 57px; 
+    background-color: $turquoise;
+    color: white; 
+    text-align: center;
+    border-radius: 50px;
+    font-size: 17.5px;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.alternative-login-link {
+    box-sizing: border-box;
+    display: flex;
+    height: 52px; 
+    justify-content: center;
+    padding-top: 17px;
+    margin-top: 20px;
+    background-color: #F9F9F9;
+    color: $text-black; 
+    font-size: 14px;
+}
+
+.alternative-login-link > :first-child {
+    font-weight: 250;
+    padding-right: 4px;
+}
+
+.alternative-login-link > :last-child {
+    font-weight: 600;
+}
+
+.alternative-login-link > :last-child > a {
+    padding-bottom: 3px;
+    border-bottom: 1px solid $border-light-grey;
+}
+
+.alternative-login-link > :last-child > a:hover{
+    border-bottom: 1px solid $text-black;
+}
+
+.t-cs {
+    margin: 15px 15px 0px 15px; 
+    padding: 0px 45px; 
+    font-size: 12px;
+    color: $grey;
+    text-align: center;  
 }

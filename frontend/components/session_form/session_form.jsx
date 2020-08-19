@@ -11,10 +11,8 @@ class SessionForm extends React.Component {
     terms() {
         if (this.props.formType === 'signup') {
             return (
-                <div>
-                    <br/>
+                <div className="t-cs">
                     <p className="terms-and-conditions">By signing up, I agree to CalCamper's terms and privacy policy.</p>
-                    <br/>
                 </div>
             )
         }
@@ -36,7 +34,6 @@ class SessionForm extends React.Component {
                         className="login-input-name"
                         onClick={this.clearInput("last_name")}
                     />
-                    <br/>
                 </div>
             )
         }
@@ -108,7 +105,7 @@ class SessionForm extends React.Component {
                             onClick={this.clearInput("password")}
                         />
                         <br/>
-                        <input type="submit" value={this.props.buttonMessage}/>
+                        <input className="login-button" type="submit" value={this.props.buttonMessage}/>
                     </div>
                     {this.terms()}
                     <div className="alternative-login-link">

@@ -9,10 +9,4 @@ class Api::SpotsController < ApplicationController
         render :show
     end 
 
-
-    # private
-
-    # def spots_params
-    #     params.require(:bench).permit(:description, :lat, :lng)
-    # end 
 end

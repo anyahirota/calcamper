@@ -4,7 +4,9 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 
 //FOR TESTING
-import { login, signup, logout } from './actions/session_actions'
+import { login, signup, logout } from './actions/session_actions';
+import {fetchSpots, fetchSpot} from './util/spot_api_util';
+import { requestSpots, requestSpot } from './actions/spot_actions'; 
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
@@ -29,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.logout = logout;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
+    window.fetchSpot = fetchSpot; 
+    window.fetchSpots = fetchSpots; 
+    window.requestSpots = requestSpots; 
+    window.requestSpot = requestSpot; 
     //FOR TESTING
 
 

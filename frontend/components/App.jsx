@@ -25,6 +25,7 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/demo" component={DemoFormContainer} />
+        <Route exact path="/spots/:id" component={SpotShowContainer} />
         <div className="test"></div>
         <Footer />
     </div>

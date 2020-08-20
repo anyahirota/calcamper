@@ -13,6 +13,8 @@ import DemoFormContainer from './session_form/demo_form_container';
 import { AuthRoute, ProtectedRoute} from '../util/route_util'; 
 import CovidBanner from './covid-banner'; 
 import Footer from './footer/footer'; 
+import SpotShowContainer from './spots/spot_show_container';
+import SpotIndexContainer from './spots/spot_index_container'; 
 
 
 const App = () => (
@@ -25,6 +27,7 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/demo" component={DemoFormContainer} />
+        {/* <Route path="/spots" component={SpotIndexContainer} /> */}
         <Route exact path="/spots/:id" component={SpotShowContainer} />
         <div className="test"></div>
         <Footer />

@@ -1,7 +1,7 @@
 import * as spotAPIUtil from '../util/spot_api_util'; 
 
-const RECEIVE_SPOTS = "RECEIVE_SPOTS"; 
-const RECEIVE_SPOT = "RECEIVE_SPOT";
+export const RECEIVE_SPOTS = "RECEIVE_SPOTS"; 
+export const RECEIVE_SPOT = "RECEIVE_SPOT";
 
 const receiveSpots = (spots) => ({
     type: RECEIVE_SPOTS, 

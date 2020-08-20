@@ -9,7 +9,8 @@ const FooterContent = () => {
                     <ul className="about-technologies-list">
                         <h1 className="about-technologies-list-h1">About this project</h1>
                         <li>
-                            <p>All images included on this site are designed by Anya Hirota or acquired from unsplash.com</p>
+                            <p>All images included on this site are designed by Anya Hirota or acquired from unsplash.com.</p>
+                            <p>Spot descriptions were acquired from miscellaneous campsite websites and Hipcamp listings, then altered to suit the purpose of this site.</p>
                         </li>
                     </ul>
                 </li>

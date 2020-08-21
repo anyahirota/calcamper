@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     # validates :email, exclusion: { in: ["Email address"]}, message: ": please enter your email." }
-    validates :email, :session_token, presence: true, uniqueness: true 
     # validates :email, format: { with: /^(.+)@(.+)$/, message: "Email invalid"  },
+    validates :email, :session_token, presence: true, uniqueness: true 
     validates :first_name, exclusion: { in: ["First name"], message: ": please enter your first name" }
     validates :last_name, exclusion: { in: ["Last name"], message: ": please enter your last name" }
     validates :password, exclusion: { in: ["Create a password"], message: ": please create a password" }

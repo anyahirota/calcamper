@@ -13,7 +13,7 @@ import DemoFormContainer from './session_form/demo_form_container';
 import { AuthRoute, ProtectedRoute} from '../util/route_util'; 
 import CovidBanner from './covid-banner'; 
 import Footer from './footer/footer'; 
-import SpotShowContainer from './spots/spot_show_container';
+import SpotShowContainer from './spot_show/spot_show_container';
 import SpotIndexContainer from './spots/spot_index_container'; 
 
 

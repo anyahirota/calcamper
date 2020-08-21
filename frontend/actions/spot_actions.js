@@ -8,9 +8,9 @@ const receiveSpots = (spots) => ({
     spots
 })
 
-const receiveSpot = (spot) => ({
+const receiveSpot = (payload) => ({
     type: RECEIVE_SPOT, 
-    spot
+    payload
 })
 
 export const requestSpots = () => dispatch => (spotAPIUtil.fetchSpots()

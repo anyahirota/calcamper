@@ -1,0 +1,66 @@
+.spot-show {
+    width: 75%;
+    margin: 0 auto;
+    font-family: $sans-serif;
+    color: $text-black; 
+}
+
+.spot-header {
+    width: 66.666%; 
+    border-bottom: 1px solid $border-light-grey;
+}
+
+.spot-header-location {
+    display: flex; 
+    font-size: 15px;
+    margin: 15px 0px;
+    
+}
+
+.spot-header-location > li {
+    margin-right: 12px;
+}
+
+.chevron-right {
+    font-size: 10px;
+    box-sizing: border-box;
+    padding-top: 3px;
+    color: $grey;
+}
+
+.spot-header-park {
+    border-bottom: 1px solid $border-light-grey;
+    padding-bottom: 2px;
+}
+
+.spot-header-park:hover {
+    border-bottom: 1px solid $text-black;
+}
+
+.spot-header-name {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.spot-header-nearby {
+    display: flex;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.spot-header-nearby > :first-child{
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.spot-header-nearby > :last-child{
+    // font-weight: 300;
+}
+
+.amenity-true {
+    color: blue; 
+}
+
+.amenity-false {
+    color: red;
+}

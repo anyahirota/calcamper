@@ -1,11 +1,13 @@
 import { connect } from 'react-redux';
 import { requestSpot } from '../../actions/spot_actions'; 
+import { selectSpotHost } from '../../reducers/selectors';
 import SpotShow from './spot_show'; 
 
 const mapStateToProps = (state, ownProps) => {
-    
+    const spot = state.entities.spots[ownProps.match.params.id];
     return {
-    spot: state.entities.spots[ownProps.match.params.id],
+    spot,
+    host: selectSpotHost(state, spot), 
 }}
 
 const mapDispatchToProps = (dispatch) => ({

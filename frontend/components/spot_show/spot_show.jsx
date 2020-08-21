@@ -2,6 +2,10 @@ import React from 'react';
 import SpotHeader from './spot_header'; 
 import SpotAmenitites from "./spot_amenities"; 
 import SpotDescriptionAndHost from "./spot_description_and_host"; 
+import SpotCheckInDetails from "./spot_check_in_details"; 
+import SpotTerrain from "./spot_terrain"; 
+import SpotActivities from "./spot_activities";
+import SpotVibe from "./spot_vibe";
 
 
 class SpotShow extends React.Component {
@@ -20,8 +24,12 @@ class SpotShow extends React.Component {
                     <SpotHeader name={this.props.spot.name} park={this.props.spot.park} nearby={this.props.spot.nearby_attractions} />
                     <SpotDescriptionAndHost description={this.props.spot.description} host={this.props.host}/>
                     <SpotAmenitites spot={this.props.spot} />
-                    {/* <div>host, covid standards message, description </div>
-                    <div>campsite area/lodging, essentials, amenities, Camping vehicle details </div>
+                    <SpotCheckInDetails spot={this.props.spot} />
+                    <SpotActivities spot={this.props.spot} />
+                    <SpotTerrain spot={this.props.spot} />
+                    <SpotVibe spot={this.props.spot} />
+
+                    {/* 
                     <div>check in details</div>
                     <div>activities</div>
                     <div>terrain</div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle } from "@fortawesome/free-regular-svg-icons"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SpotDescriptionAndHost = ({description, host}) => {
@@ -8,7 +9,7 @@ const SpotDescriptionAndHost = ({description, host}) => {
     return (
         <div className="spot-description-host">
             <div className="host-area">
-                <p>PROFILE PIC</p>
+                <p><FontAwesomeIcon icon={faUserCircle} /></p>
                 <div className="hosted-by">
                     <p>Hosted by</p>
                     <p>{host.first_name} {lastInitial}.</p>

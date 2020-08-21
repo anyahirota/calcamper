@@ -6,7 +6,7 @@
 }
 
 .spot-header {
-    width: 66.666%; 
+    width: 70%; 
     border-bottom: 1px solid $border-light-grey;
 }
 
@@ -57,10 +57,64 @@
     // font-weight: 300;
 }
 
+.spot-description-host {
+    width: 70%; 
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.host-area {
+    display: flex;
+    width: 200px; 
+    height: 90px;
+    align-items: center;
+}
+
+.host-area > :first-child{
+    font-size: 80px;
+}
+
+.hosted-by {
+    margin-left: 10px;
+}
+
+.hosted-by > :first-child {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.hosted-by > :last-child {
+    font-size: 15px;
+}
+
+.description-area {
+    width: 450px;
+}
+
+.description-area > :first-child {
+    box-sizing: border-box;
+    padding: 15px;
+    color: $violet-purple;
+    background-color: $light-purple;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.description-area > :last-child {
+    font-size: 15px;
+    line-height: 25px;
+}
+
 .amenity-true {
     color: blue; 
 }
 
 .amenity-false {
     color: red;
+    
 }

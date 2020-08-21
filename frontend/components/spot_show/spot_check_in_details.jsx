@@ -14,6 +14,7 @@ const SpotCheckInDetails = ({spot}) => {
                     <li><p>On arrival: </p>{spot.on_arrival}</li>
                     <li><p>Minimum nights: </p>{spot.minimum_nights}</li>
                     <li><p>Accepts bookings: </p>{spot.booking_acceptance}</li>
+                    
                 </ul>
             </div>
         </div>

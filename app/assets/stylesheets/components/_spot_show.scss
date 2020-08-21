@@ -192,3 +192,36 @@
     transform: translate(-50%, 0) rotate(90deg);
 }
 
+.spot-check-in {
+    width: 70%;
+    border-top: 1px solid $border-light-grey;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+
+.spot-check-in-inner {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.spot-check-in-inner > p {
+    font-size: 14px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+
+.spot-check-in-col > li {
+    line-height: 25px;
+    display: flex;
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+.spot-check-in-col > li > p {
+    font-weight: 600;
+    margin-right: 5px;
+}

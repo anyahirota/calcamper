@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_184203) do
+ActiveRecord::Schema.define(version: 2020_08_21_031802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(version: 2020_08_19_184203) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "coastal", null: false
+    t.boolean "pets_allowed", null: false
     t.index ["host_id"], name: "index_spots_on_host_id"
     t.index ["name"], name: "index_spots_on_name", unique: true
   end

@@ -3,7 +3,6 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SpotHeader = (props) => {
-    // debugger
     return (
         <div className="spot-header">
             <ul className="spot-header-location">

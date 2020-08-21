@@ -7,12 +7,12 @@ import SpotDescriptionAndHost from "./spot_description_and_host";
 class SpotShow extends React.Component {
 
     componentDidMount() {
-        // debugger
+        
         this.props.requestSpot(this.props.match.params.id); 
     }
 
     render() {
-        debugger
+        
         if (this.props.spot !== undefined ) {
             return (
                 <div className="spot-show">

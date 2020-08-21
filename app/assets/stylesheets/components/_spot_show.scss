@@ -1,5 +1,5 @@
 .spot-show {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     font-family: $sans-serif;
     color: $text-black; 
@@ -110,11 +110,85 @@
     line-height: 25px;
 }
 
-.amenity-true {
-    color: blue; 
+.spot-amenities {
+    margin-top: 40px;
+    width: 70%;
+}
+
+.spot-amenitities-card {
+    display: flex;
+    width: 720px;
+}
+
+.amenity-box {
+    width: 215px;
+    height: 320px; 
+    border: 1px solid $border-light-grey; 
+    margin-right: 20px;
+    box-sizing: border-box;
+    padding: 25px 15px;
+}
+
+.amenity-box > :last-child {
+    margin-right: 0px;
+}
+
+.amenity-box > h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.amenity-box > li {
+    display: flex;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.box-icons {
+    font-size: 17px;
+    width: 30px;
+    position: relative;
+}
+
+.vehicle-details {
+    border: 1px solid $border-light-grey;
+    margin-top: 20px;
+    padding: 25px 15px;
+    width: 685px;
+    box-sizing: border-box;
+}
+.vehicle-details > h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.vehicle-details-lists {
+    display: flex;
+}
+
+.amenity-box-big > :first-child {
+    margin-right: 140px;
+}
+
+.amenity-box-big > li {
+    display: flex;
+    margin-bottom: 12px;
+    font-size: 15px;
 }
 
 .amenity-false {
-    color: red;
-    
+    color: $grey;
 }
+
+.amenity-false > :first-child:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 141.421356%;
+    top: -20.710678%;
+    display: block;
+    background: $text-black;
+    left: 35%;
+    transform: translate(-50%, 0) rotate(90deg);
+}
+

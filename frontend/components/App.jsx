@@ -29,7 +29,6 @@ const App = () => (
         <AuthRoute exact path="/demo" component={DemoFormContainer} />
         {/* <Route path="/spots" component={SpotIndexContainer} /> */}
         <Route exact path="/spots/:id" component={SpotShowContainer} />
-        <div className="test"></div>
         <Footer />
     </div>
 );

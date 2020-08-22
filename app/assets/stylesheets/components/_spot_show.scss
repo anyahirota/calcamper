@@ -156,7 +156,7 @@
     border: 1px solid $border-light-grey;
     margin-top: 20px;
     padding: 25px 15px;
-    width: 95%;
+    max-width: 685px;
     box-sizing: border-box;
     box-shadow: 0 3px 3px -2px $border-light-grey;
 }
@@ -280,4 +280,53 @@
     text-align: center;
     font-size: 15px;
     font-weight: 600;
+}
+
+.spot-vibe {
+    width: 70%;
+    border-top: 1px solid $border-light-grey;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+
+.spot-vibe > h1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.vibe-box-list {
+    display: flex;
+    max-width: 700px;
+    flex-wrap: wrap;
+}
+
+.vibe-box {
+    box-sizing: border-box;
+    border: 1px solid $border-light-grey;
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 210px;
+    width: 210px;
+    text-align: center;
+}
+
+.vibe-box > :first-child{
+    font-size: 30px; 
+    font-weight: 600;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+
+.vibe-box > :last-child{
+    font-size: 15px; 
+    font-weight: 300;
+    padding-top: 3px;
+}
+
+.vibe-box-pic {
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 210px;
+    width: 210px;
 }

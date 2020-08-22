@@ -11,15 +11,21 @@ class SpotIndex extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <ul>
-                    {this.props.spots.map(spot => (
-                        < SpotIndexItem spot={spot} />
-                    ))}
-                </ul>
-            </div>
-        )
+        if (this.props.spots !== undefined) {
+            return (
+                <div>
+                    <ul>
+                        {this.props.spots.map((spot, idx) => (
+                            < SpotIndexItem key={idx} spot={spot} />
+                        ))}
+                    </ul>
+                </div>
+            )
+        } else {
+            return (
+                <div></div>
+            )
+        }
     }
 }
 

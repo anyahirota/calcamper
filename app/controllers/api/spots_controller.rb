@@ -5,7 +5,7 @@ class Api::SpotsController < ApplicationController
     end 
 
     def show
-        @spot = Spot.find(params[:id])
+        @spot = Spot.with_attached_vibe_photos.find(params[:id])
         render :show
     end 
 

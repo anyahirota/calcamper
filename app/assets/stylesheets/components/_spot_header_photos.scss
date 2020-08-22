@@ -1,0 +1,9 @@
+.spot-header-photos {
+    display: flex;
+}
+
+.spot-header-photos > li > img{
+    height: 500px;
+    width: auto; 
+    margin-left: 15px;
+}

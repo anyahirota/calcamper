@@ -24,9 +24,9 @@ const App = () => (
             <NavBarContainer />
         </header>
         <Route exact path="/" component={SpotIndexContainer} />
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <Route exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <AuthRoute exact path="/demo" component={DemoFormContainer} />
+        <Route exact path="/demo" component={DemoFormContainer} />
         {/* <Route exact path="/spots" component={SpotIndexContainer} /> */}
         <Route exact path="/spots/:id" component={SpotShowContainer} />
         <Footer />

@@ -58,6 +58,10 @@ class SessionForm extends React.Component {
         });
     }
 
+    goBack() {
+        return (e) => this.props.history.goBack(); 
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -84,6 +88,13 @@ class SessionForm extends React.Component {
             passwordType = "password"
         }; 
 
+        if (this.props.currentUser !== null) {
+            return (
+                <div>
+                    {this.props.history.goBack()}
+                </div>
+            )
+        } else {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -117,9 +128,9 @@ class SessionForm extends React.Component {
                         <p>{this.props.navLink}</p>
                     </div>
                 </form>
-                <Link to="/"><div className="modal-screen"></div></Link>
+                <div onClick={this.goBack()} className="modal-screen"> </div>
             </div>
-        )
+        )}
     }
 
 }

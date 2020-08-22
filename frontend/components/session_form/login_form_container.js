@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { login, receiveErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = ({ errors, session}) => {
     return {
         user: { 
             email: "Email", 
@@ -16,7 +16,8 @@ const mapStateToProps = ({ errors }) => {
         headerMessage: "Welcome back!",
         headerSubMessage: "Let's get you outside.",
         footerMessage: "Don't have a CalCamper account?", 
-        buttonMessage: "Log in" 
+        buttonMessage: "Log in", 
+        currentUser: session.id  
     };
 };
 

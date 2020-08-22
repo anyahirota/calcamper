@@ -7,3 +7,27 @@
     width: auto; 
     margin-left: 15px;
 }
+
+.carousel-container {
+    position: relative;
+}
+
+.rotating-buttons {
+    position: absolute; 
+    top: 200px;
+    left: 40px; 
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    width:90%; 
+}
+
+.rotating-buttons > div {
+    font-size: 50px;
+    color: white; 
+}
+
+.rotating-buttons > div:hover {
+    font-size: 55px;
+    color: white; 
+}

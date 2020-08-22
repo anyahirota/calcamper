@@ -97,6 +97,7 @@ class SessionForm extends React.Component {
         } else {
         return (
             <div className="login-form-container">
+                <div className="some-space"></div>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div className="form-messages">
                         <p className="form-header-message">{this.props.headerMessage}</p>

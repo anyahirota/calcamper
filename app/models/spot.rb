@@ -7,7 +7,7 @@ class Spot < ApplicationRecord
     validates :check_in_details, :check_out_details, :cancellation_policy, :on_arrival, :booking_acceptance, presence: true
     
     after_initialize :ensure_maximum_occupancy
-    
+
     has_many_attached :vibe_photos
     has_many_attached :spot_photos
 
@@ -15,6 +15,15 @@ class Spot < ApplicationRecord
         primary_key: :id,
         foreign_key: :host_id, 
         class_name: :User
+    
+    has_many :bookings, 
+        primary_key: :id,
+        foreign_key: :spot_id,
+        class_name: :Booking
+    
+    has_many :guests, 
+        through: :bookings, 
+        source: :guest
 
     def ensure_maximum_occupancy
         self.maximum_occupancy ||= (self.sites * self.guests_per_site)

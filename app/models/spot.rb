@@ -7,8 +7,7 @@ class Spot < ApplicationRecord
     validates :check_in_details, :check_out_details, :cancellation_policy, :on_arrival, :booking_acceptance, presence: true
     
     after_initialize :ensure_maximum_occupancy
-
-    has_one_attached :profile_pic
+    
     has_many_attached :vibe_photos
     has_many_attached :spot_photos
 

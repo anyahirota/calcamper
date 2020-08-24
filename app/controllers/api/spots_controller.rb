@@ -1,6 +1,6 @@
 class Api::SpotsController < ApplicationController
     def index
-        @spots = Spot.all 
+        @spots = Spot.with_attached_spot_photos.all 
         render :index
     end 
 

@@ -1,0 +1,121 @@
+.spot-index {
+    width: 90%;
+    margin: 0 auto;
+    font-family: $sans-serif;
+    color: $text-black; 
+}
+
+.spot-index-buttons {
+    border: 1px solid $border-light-grey;
+    background-color: #FDFDFD;
+    display: flex;
+}
+
+.spot-index-button {
+    margin: 15px; 
+    box-sizing: border-box;
+    padding: 12px 10px;
+    border: 1px solid $border-light-grey;
+    border-radius: 2px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    font-size: 15px;
+}
+
+.spot-index-button > :first-child {
+    margin-right: 5px;
+}
+
+.spot-index-button:hover {
+    border-color: $text-black;
+}
+
+.spot-index-button-no-icon {
+    margin: 15px; 
+    font-size: 15px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 12px 10px;
+    border: 1px solid $border-light-grey;
+    background-color: white;
+    cursor: pointer;
+}
+
+.spot-index-button-no-icon:hover {
+    border-color: $text-black;
+}
+
+.spot-index-button-selected {
+    border-color: $turquoise;
+    color: $turquoise;
+    background-color: #F3FBFB;
+}
+
+.spot-index-button-selected:hover {
+    border-color: $turquoise;
+}
+
+.spot-index-list {
+    width: 70%; 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spot-index-item {
+    width: 350px; 
+    height: 280px;
+    margin-right: 30px;
+    margin-top: 30px;
+    box-shadow: 0 3px 3px -2px $border-light-grey;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.spot-profile-pic {
+    position:relative;
+    width: 350px;
+    height: 160px;
+    overflow: hidden; 
+    
+}
+
+.spot-profile-pic > img{
+    position: absolute;
+    object-fit: cover; 
+    bottom:0; 
+}
+
+.spot-index-item-info {
+    height: 120px;
+    width: 350px;
+    border-bottom: 1px solid $border-light-grey;
+    border-right: 1px solid $border-light-grey;
+    border-left: 1px solid $border-light-grey;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.spot-index-item-info > h1 {
+    font-size: 22px;
+}
+
+.spot-index-item-info > h2 {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 200;
+    color: $grey;
+}
+
+.spot-index-item-info-bottom-row {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 30px;
+}
+
+.spot-index-item-info-bottom-row > p {
+   font-size: 18px;
+}

@@ -21,7 +21,22 @@ const Splash = () => {
             </div>
             {<SplashExperience />}
             {<SplashParks />}
-            {/* calcamper badges */}
+
+            <div className="splash-icons">
+                <div className="splash-icon">
+                    <img src={window.icon1} alt="icon1" />
+                    <p>Calcamper empowers people to share their land with campers.</p>
+                </div>
+                <div className="splash-icon">
+                    <img src={window.icon2} alt="icon2" />
+                    <p>Creating sustainable revenue and fostering community.</p>
+                </div>
+                <div className="splash-icon">
+                    <img src={window.icon3} alt="icon3" />
+                    <p>Unlocking access to incredible new places to camp.</p>
+                </div>
+            </div>
+            
         </div>
     )
 }

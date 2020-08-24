@@ -14,7 +14,7 @@ const SplashParks = () => {
                         <h1>Big Sur</h1> 
                     </div>
                 </li>
-                <li>
+                <li className="park-box">
                     <div className="park-pic-container">
                         <img src={window.tahoe} alt="tahoe" />  
                     </div >
@@ -22,7 +22,7 @@ const SplashParks = () => {
                         <h1>Tahoe</h1>
                     </div>
                 </li>
-                <li>
+                <li className="park-box">
                     <div className="park-pic-container">
                         <img src={window.death_valley} alt="death_valley" />
                     </div >
@@ -30,7 +30,7 @@ const SplashParks = () => {
                         <h1>Death Valley</h1>
                     </div>
                 </li>
-                <li>
+                <li className="park-box">
                     <div className="park-pic-container">
                         <img src={window.lassen} alt="lassen" />
                     </div >
@@ -38,7 +38,7 @@ const SplashParks = () => {
                         <h1>Lassen Volcanic</h1>
                     </div>
                 </li>
-                <li>
+                <li className="park-box">
                     <div className="park-pic-container">
                         <img src={window.joshua_tree} alt="joshua_tree" />
                     </div >
@@ -46,7 +46,7 @@ const SplashParks = () => {
                         <h1>Joshua Tree</h1>
                     </div>
                 </li>
-                <li>
+                <li className="park-box">
                     <div className="park-pic-container">
                         <img src={window.kings_canyon} alt="kings_canyon" />
                     </div >
@@ -54,12 +54,14 @@ const SplashParks = () => {
                         <h1>Kings Canyon</h1>
                     </div>
                 </li>
-                <li>
-                    <div className="park-pic-container">
+                <li className="big-park-box">
+                    <div className="big-park-pic-container">
                         <img src={window.yosemite} alt="yosemite" />
                     </div >
-                    <div className="park-box-title">
-                        <h1>Yosemite</h1>
+                    <div className="splash-hosting-block">
+                        <h1>Discover Yosemite National Park</h1>
+                        <p>While best known for its waterfalls, in Yosemite, you can find deep valleys, grand meadows, ancient giant sequoias, a vast wilderness area.</p>
+                        <div className="splash-park-button">View Listings</div>
                     </div>
                 </li>
             </ul>

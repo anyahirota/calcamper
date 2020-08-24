@@ -24,13 +24,16 @@ class SpotIndex extends React.Component {
     }
     
     componentDidMount() {
-        this.props.requestSpots();
+        this.props.requestSpots()
+            .then(() => this.props.filterSpotByPark(this.props.park))
+            .then(() => this.props.filterSpotByType(this.props.spot_type))
     }
 
     render() {
         if (this.props.spots !== undefined) {
             return (
                 <div>
+                    {/* Buttons:
                     <div onClick={this.filterByType("camping")}>CAMPING</div>
                     <div onClick={this.filterByType("glamping")}>GLAMPING</div>
                     <div onClick={this.filterByType("RV")}>RV</div>
@@ -41,7 +44,7 @@ class SpotIndex extends React.Component {
                     <div onClick={this.filterByPark("Lassen Volcanic National Park")}>Lassen Volcanic</div>
                     <div onClick={this.filterByPark("Tahoe National Forest")}>Tahoe</div>
                     <div onClick={this.filterByPark("Yosemite National Park")}>Yosemite</div>
-                    <div onClick={this.all()}>ALL</div>
+                    <div onClick={this.all()}>ALL</div> */}
                     <ul>
                         {this.props.spots.map((spot, idx) => (
                             < SpotIndexItem key={idx} spot={spot} />

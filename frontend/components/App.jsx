@@ -14,8 +14,18 @@ import { AuthRoute, ProtectedRoute} from '../util/route_util';
 import CovidBanner from './covid-banner'; 
 import Footer from './footer/footer'; 
 import SpotShowContainer from './spot_show/spot_show_container';
-import SpotIndexContainer from './spots/spot_index_container'; 
+import SpotIndexContainer from './spot_index/spot_index_container'; 
 import Splash from './splash/splash'; 
+import SpotIndexCampingContainer from './spot_index/spot_index_type_containers/spot_index_camping';
+import SpotIndexGlampingContainer from './spot_index/spot_index_type_containers/spot_index_glamping';
+import SpotIndexRVContainer from './spot_index/spot_index_type_containers/spot_index_rv'; 
+import SpotIndexBigSurContainer from './spot_index/spot_index_park_containers/spot_index_big_sur_container';
+import SpotIndexDeathValleyContainer from './spot_index/spot_index_park_containers/spot_index_death_valley_container';
+import SpotIndexJoshuaTreeContainer from './spot_index/spot_index_park_containers/spot_index_joshua_tree_container';
+import SpotIndexKingsContainer from './spot_index/spot_index_park_containers/spot_index_kings_container';
+import SpotIndexLassenContainer from './spot_index/spot_index_park_containers/spot_index_lassen_container';
+import SpotIndexTahoeContainer from './spot_index/spot_index_park_containers/spot_index_tahoe_container';
+import SpotIndexYosemiteContainer from './spot_index/spot_index_park_containers/spot_index_yosemite_container'; 
 
 
 const App = () => (
@@ -29,7 +39,18 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path="/demo" component={DemoFormContainer} />
         <Route exact path="/spots" component={SpotIndexContainer} />
-        <Route exact path="/spots/:id" component={SpotShowContainer} />
+        <Route exact path="/spots/camping" component={SpotIndexCampingContainer} />
+        <Route exact path="/spots/glamping" component={SpotIndexGlampingContainer} />
+        <Route exact path="/spots/rv" component={SpotIndexRVContainer} />
+        <Route exact path="/spots/bigsur" component={SpotIndexBigSurContainer} />
+        <Route exact path="/spots/deathvalley" component={SpotIndexDeathValleyContainer} />
+        <Route exact path="/spots/joshuatree" component={SpotIndexJoshuaTreeContainer} />
+        <Route exact path="/spots/kingscanyon" component={SpotIndexKingsContainer} />
+        <Route exact path="/spots/lassenvolcanic" component={SpotIndexLassenContainer} />
+        <Route exact path="/spots/tahoe" component={SpotIndexTahoeContainer} />
+        <Route exact path="/spots/yosemite" component={SpotIndexYosemiteContainer} />
+
+        <Route exact path="/spot/:id" component={SpotShowContainer} />
         <Footer />
     </div>
 );

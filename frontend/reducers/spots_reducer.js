@@ -11,6 +11,9 @@ const spotsReducer = (oldState = {}, action) => {
             return Object.assign({}, oldState, { [action.payload.spot.id]: action.payload.spot });
         
         case FILTER_SPOT_BY_TYPE:
+            if (action.spot_type === "all") { 
+                return oldState;  
+            } else {
             let newStateArray = Object.values(newState); 
             for (let i = 0; i < newStateArray.length; i++) {
                 let spot = newStateArray[i];
@@ -19,8 +22,12 @@ const spotsReducer = (oldState = {}, action) => {
                 }
             }
             return newState; 
+        }
         
         case FILTER_SPOT_BY_PARK:
+            if (action.park === "all") {
+                return oldState;
+            } else {
             let spotArray = Object.values(newState);
             for (let i = 0; i < spotArray.length; i++) {
                 let spot = spotArray[i]; 
@@ -29,7 +36,8 @@ const spotsReducer = (oldState = {}, action) => {
                 }
             }
             return newState; 
-
+        }
+        
         default:
             return oldState;
     }

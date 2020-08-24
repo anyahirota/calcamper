@@ -15,6 +15,7 @@ import CovidBanner from './covid-banner';
 import Footer from './footer/footer'; 
 import SpotShowContainer from './spot_show/spot_show_container';
 import SpotIndexContainer from './spots/spot_index_container'; 
+import Splash from './splash/splash'; 
 
 
 const App = () => (
@@ -23,11 +24,11 @@ const App = () => (
             <CovidBanner />
             <NavBarContainer />
         </header>
-        <Route exact path="/" component={SpotIndexContainer} />
+        <Route exact path="/" component={Splash} />
         <Route exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path="/demo" component={DemoFormContainer} />
-        {/* <Route exact path="/spots" component={SpotIndexContainer} /> */}
+        <Route exact path="/spots" component={SpotIndexContainer} />
         <Route exact path="/spots/:id" component={SpotShowContainer} />
         <Footer />
     </div>

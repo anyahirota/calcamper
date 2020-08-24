@@ -1,0 +1,153 @@
+.splash {
+    width: 80%;
+    margin: 0 auto;
+    font-family: $sans-serif;
+    color: $text-black; 
+}
+
+.splash-header-message {
+    margin-top: 70px;
+}
+
+.splash-header-message > h1 {
+    font-size: 43px;
+    font-weight: 600;
+    width: 500px; 
+}
+
+.splash-header-message > h2 {
+    font-size: 20px;
+    width: 490px; 
+    padding: 25px 0px;
+    line-height: 28px; 
+}
+
+.splash-hosting {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.splash-hosting > img{
+    height: 470px; 
+    width: auto;
+    
+}
+
+.splash-hosting-block {
+    position: absolute;
+    top: 55px;
+    left: 55px; 
+    width: 350px;
+    height: 350px; 
+    background-color: $text-black;
+    color: white;
+    box-sizing: border-box;
+    padding: 25px
+}
+
+.splash-hosting-block > h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.splash-hosting-block > p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 28px;
+}
+
+.splash-hosting-button {
+    height: 50px;
+    width: 140px; 
+    background-color: white;
+    color: $text-black;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 7px 10px 0px 10px; 
+    border-radius: 5px;
+}
+
+.splash-experience {
+    margin-top: 40px;
+}
+
+.splash-experience > h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.experience-list {
+    margin: 35px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.experience-box {
+    width: 300px; 
+    height: 570px; 
+    overflow: hidden; 
+    margin-left: 5px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.experience-box > :first-child {
+    margin-left: 0px;
+}
+
+.experience-box > img {
+    object-fit: cover;
+}
+
+.experience-box-title {
+    width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    color: white;
+    top: 80%; 
+}
+
+.experience-box-title > :first-child {
+    font-size: 25px;
+    font-weight: 600;
+    height: 40px;
+}
+
+.experience-box-title > :last-child {
+    font-size: 15px;
+}
+
+.experience-box:hover {
+    margin-top: 0px;
+    box-shadow: -2px 2px 2px rgba(117, 117, 117, 0.5), 2px 2px 2px rgba(117, 117, 117, 0.5);
+}
+
+.splash-parks {
+    margin-top: 40px;
+}
+
+.splash-parks > h1 {
+    margin-top: 70px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.parks-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.park-box {
+    width: 300px;
+}
+
+.park-box > img {
+    
+}

@@ -43,12 +43,12 @@ const App = () => (
         <Route exact path="/spots/glamping" component={SpotIndexGlampingContainer} />
         <Route exact path="/spots/rv" component={SpotIndexRVContainer} />
         <Route exact path="/spots/bigsur" component={SpotIndexBigSurContainer} />
-        <Route exact path="/spots/deathvalley" component={SpotIndexDeathValleyContainer} />
-        <Route exact path="/spots/joshuatree" component={SpotIndexJoshuaTreeContainer} />
-        <Route exact path="/spots/kingscanyon" component={SpotIndexKingsContainer} />
-        <Route exact path="/spots/lassenvolcanic" component={SpotIndexLassenContainer} />
-        <Route exact path="/spots/tahoe" component={SpotIndexTahoeContainer} />
-        <Route exact path="/spots/yosemite" component={SpotIndexYosemiteContainer} />
+        <Route exact path="/spots/deathvalleynationalpark" component={SpotIndexDeathValleyContainer} />
+        <Route exact path="/spots/joshuatreenationalpark" component={SpotIndexJoshuaTreeContainer} />
+        <Route exact path="/spots/kingscanyonnationalpark" component={SpotIndexKingsContainer} />
+        <Route exact path="/spots/lassenvolcanicnationalpark" component={SpotIndexLassenContainer} />
+        <Route exact path="/spots/tahoenationalforest" component={SpotIndexTahoeContainer} />
+        <Route exact path="/spots/yosemitenationalpark" component={SpotIndexYosemiteContainer} />
 
         <Route exact path="/spot/:id" component={SpotShowContainer} />
         <Footer />

@@ -17,7 +17,7 @@ const SplashParks = () => {
                     </Link>
                 </li>
                 <li className="park-box">
-                    <Link to="/spots/tahoe">
+                    <Link to="/spots/tahoenationalforest">
                         <div className="park-pic-container">
                             <img src={window.tahoe} alt="tahoe" />  
                         </div >
@@ -27,7 +27,7 @@ const SplashParks = () => {
                     </Link>
                 </li>
                 <li className="park-box">
-                    <Link to="/spots/deathvalley">
+                    <Link to="/spots/deathvalleynationalpark">
                         <div className="park-pic-container">
                             <img src={window.death_valley} alt="death_valley" />
                         </div >
@@ -37,7 +37,7 @@ const SplashParks = () => {
                     </Link>
                 </li>
                 <li className="park-box">
-                    <Link to="/spots/lassenvolcanic">
+                    <Link to="/spots/lassenvolcanicnationalpark">
                         <div className="park-pic-container">
                             <img src={window.lassen} alt="lassen" />
                         </div >
@@ -47,7 +47,7 @@ const SplashParks = () => {
                     </Link>
                 </li>
                 <li className="park-box">
-                    <Link to="/spots/joshuatree">
+                    <Link to="/spots/joshuatreenationalpark">
                         <div className="park-pic-container">
                             <img src={window.joshua_tree} alt="joshua_tree" />
                         </div >
@@ -57,7 +57,7 @@ const SplashParks = () => {
                     </Link>
                 </li>
                 <li className="park-box">
-                    <Link to="/spots/kingscanyon">
+                    <Link to="/spots/kingscanyonnationalpark">
                         <div className="park-pic-container">
                             <img src={window.kings_canyon} alt="kings_canyon" />
                         </div >
@@ -73,7 +73,7 @@ const SplashParks = () => {
                     <div className="splash-hosting-block">
                         <h1>Discover Yosemite National Park</h1>
                         <p>While best known for its waterfalls, in Yosemite, you can find deep valleys, grand meadows, ancient giant sequoias, a vast wilderness area.</p>
-                        <Link to="/spots/yosemite"><div className="splash-park-button">View Listings</div></Link>
+                        <Link to="/spots/yosemitenationalpark"><div className="splash-park-button">View Listings</div></Link>
                     </div>
                 </li>
             </ul>

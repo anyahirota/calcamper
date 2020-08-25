@@ -1,0 +1,1 @@
+json.extract! booking, :id, :spot_id, :booker_id, :total_nights, :total_price, :guests, :check_in_date, :check_out_date

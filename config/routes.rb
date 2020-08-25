@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resource :session, only: [:create, :destroy]
     resources :spots, only: [:show, :index]
+    resources :bookings, except: [:new, :edit, :index]
   end 
   
   

@@ -7,6 +7,7 @@ import Root from "./components/root";
 import { login, signup, logout } from './actions/session_actions';
 import {fetchSpots, fetchSpot} from './util/spot_api_util';
 import { requestSpots, requestSpot } from './actions/spot_actions'; 
+import { createBooking, updateBooking, deleteBooking, fetchBookings} from './actions/booking_actions'; 
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
@@ -35,6 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchSpots = fetchSpots; 
     window.requestSpots = requestSpots; 
     window.requestSpot = requestSpot; 
+    window.createBooking = createBooking; 
+    window.updateBooking = updateBooking; 
+    window.deleteBooking = deleteBooking;
+    window.fetchBookings = fetchBookings; 
     //FOR TESTING
 
 

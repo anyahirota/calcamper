@@ -1,5 +1,14 @@
 class Api::BookingsController < ApplicationController
     
+    def index 
+        if logged_in?
+            @user = current_user
+            render :index
+        else
+            render json: ['Must be signed in to view bookings'], status: 404
+        end
+    end 
+
     def show
         @booking = Booking.find(params[:id])
         render :show
@@ -10,7 +19,7 @@ class Api::BookingsController < ApplicationController
 
         if @booking.save 
             @user = User.find(@booking.booker_id)
-            render "api/users/show"
+            render :index
         else
             render json: @booking.errors.full_messages, status: 422
         end
@@ -20,7 +29,7 @@ class Api::BookingsController < ApplicationController
         @booking = Booking.find(params[:id])
         if @booking.update_attributes(booking_params)
             @user = User.find(@booking.booker_id)
-            render "api/users/show"
+            render :index
         else 
             render json: @booking.errors.full_messages, status: 422
         end 
@@ -30,7 +39,7 @@ class Api::BookingsController < ApplicationController
         @booking = Booking.find(params[:id])
         @booking.destroy
         @user = User.find(@booking.booker_id)
-        render "api/users/show"
+        render :index
     end
 
     private 

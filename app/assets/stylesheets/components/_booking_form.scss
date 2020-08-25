@@ -1,0 +1,17 @@
+.booking-form-container {
+    // position: sticky;
+    // position: -webkit-sticky;
+    top: -50px;
+    position: absolute;
+    left: 70%; 
+    height: 100%;  
+}
+
+.booking-form-sticky-container {
+    height: 100px;
+    width: 300px;
+    border: 2px solid blue; 
+    position: sticky;
+    top: 0;
+    margin-left: 30px;
+}

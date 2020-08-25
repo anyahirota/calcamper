@@ -1,5 +1,7 @@
 .spot-header-photos {
     display: flex;
+    width: 100%;
+    overflow: hidden;
 }
 
 .spot-header-photos > li > img{

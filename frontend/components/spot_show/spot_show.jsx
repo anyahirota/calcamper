@@ -6,7 +6,8 @@ import SpotCheckInDetails from "./spot_check_in_details";
 import SpotTerrain from "./spot_terrain"; 
 import SpotActivities from "./spot_activities";
 import SpotVibe from "./spot_vibe";
-import SpotHeaderPhotos from "./spot_header_photos"; 
+import SpotHeaderPhotos from "./spot_header_photos";
+import BookingFormContainer from "../bookings/booking_form_container";  
 
 
 class SpotShow extends React.Component {
@@ -23,13 +24,14 @@ class SpotShow extends React.Component {
                     <div>
                         <SpotHeaderPhotos photos={this.props.spot.spotPhotoUrls} />
                         <div className="spot-show">
+                            <BookingFormContainer spot={this.props.spot} />
                             <SpotHeader name={this.props.spot.name} park={this.props.spot.park} nearby={this.props.spot.nearby_attractions} />
                             <SpotDescriptionAndHost description={this.props.spot.description} host={this.props.host}/>
                             <SpotAmenitites spot={this.props.spot} />
                             <SpotCheckInDetails spot={this.props.spot} />
                             <SpotActivities spot={this.props.spot} />
                             <SpotTerrain spot={this.props.spot} />
-                            <SpotVibe spot={this.props.spot} vibePhotoUrls/>
+                            <SpotVibe spot={this.props.spot} />
                             
                         </div>
                     </div >

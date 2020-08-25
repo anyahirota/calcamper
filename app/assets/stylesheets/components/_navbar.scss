@@ -66,8 +66,17 @@
     position: absolute;
     right: 0px; 
 }
+.dropdown-area {
+    position: absolute; 
+    width: 200px;
+    height: 200px; 
+    right: 0px;
+    top: -30px;
+}
 
 .arrow {
+    position: absolute;
+    top: 0; 
     height: 0px; 
     width: 0px;
     border-left: 20px solid transparent;
@@ -78,6 +87,8 @@
     z-index: 5;
 }
 .empty-arrow {
+    position: absolute;
+    top: 0; 
     height: 0px; 
     width: 0px;
     border-left: 19px solid transparent;

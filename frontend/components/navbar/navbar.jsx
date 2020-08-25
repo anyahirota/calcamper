@@ -21,6 +21,7 @@ class NavBar extends React.Component {
                         <img src={window.reddishBear} alt="Logo" />
                     </div>
                     <div className="bear-dropdown hidden" >
+                        <div className="dropdown-area"></div>
                         <div className="arrow"></div>
                         <div className="empty-arrow"></div>
                         <ul className="bear-dropdown-ul">

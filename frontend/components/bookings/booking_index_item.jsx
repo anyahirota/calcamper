@@ -14,7 +14,7 @@ const BookingIndexItem = ({ booking, spot, deleteBooking }) => {
     } else if (spot.spot_type === "glamping") {
         icon = faHome;
     } else {
-        icon = faCaravan
+        icon = faCaravan; 
     }
 
     return(
@@ -53,7 +53,7 @@ const BookingIndexItem = ({ booking, spot, deleteBooking }) => {
                     </div>
                 </div>
                 <div className="booking-index-item-buttons">
-                    <div className="booking-index-item-button-pink" >Update Booking</div>
+                    <div className="booking-index-item-button-pink" ><Link to={`/bookings/${booking.id}`}>Update Booking</Link></div>
                     <div className="booking-index-item-button" onClick={() => deleteBooking(booking.id)}>Cancel Booking</div>
                     
                 </div>

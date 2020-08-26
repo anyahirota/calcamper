@@ -65,6 +65,7 @@ class BookingForm extends React.Component {
             )
         }
     }
+    
     numNights() {
         if (this.state.check_out_date !== null) {
             const date1 = this.state.check_in_date["_d"];
@@ -151,9 +152,7 @@ class BookingForm extends React.Component {
                                     startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
                                     endDate={this.state.check_out_date} // momentPropTypes.momentObj or null,
                                     endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-                                    onDatesChange={updateDate}
-                                    //     , () => {this.numNights();
-                                    // })} // PropTypes.func.isRequired,
+                                    onDatesChange={updateDate} // PropTypes.func.isRequired,
                                     focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
                                     onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
                                     minimumNights={this.props.spot.minimum_nights}

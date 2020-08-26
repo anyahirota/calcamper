@@ -1,0 +1,38 @@
+/* // NOTE: the order of these styles DO matter
+
+// Will edit everything selected including everything between a range of dates */ 
+
+.CalendarDay__selected_span {
+  background: #9fecd5; 
+  color: #33ad89; 
+  
+}
+
+.CalendarDay__selected {
+  background: #40D9AC;
+  color: white;
+  border: 2px solid #40D9AC
+}
+
+.CalendarDay__selected:hover {
+  background: #33ad89;
+  color: white;
+}
+
+.CalendarDay__hovered_span:hover,
+.CalendarDay__hovered_span {
+  background: #9fecd5;
+  color: #33ad89;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight::before {
+  border-right: 33px solid #40D9AC;
+}
+
+.DateInput_input__focused {
+  border-bottom: 2px solid #40D9AC;
+}
+
+.DateInput_input {
+  cursor: pointer;
+}

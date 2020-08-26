@@ -14,7 +14,7 @@ const removeBooking = (bookingId) => ({
     bookingId
 })
 
-const receiveBookingErrors = (errors) => ({
+export const receiveBookingErrors = (errors) => ({
     type: RECEIVE_BOOKING_ERRORS,
     errors
 })

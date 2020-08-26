@@ -13,6 +13,7 @@ class BookingForm extends React.Component {
         super(props); 
         this.state = this.props.booking; 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleNonUser = this.handleNonUser.bind(this); 
     }
 
     componentDidMount() {
@@ -115,6 +116,11 @@ class BookingForm extends React.Component {
             .then(() => this.props.history.push('/bookings'))
     }
 
+    handleNonUser(e) {
+        e.preventDefault();
+        this.props.receiveErrors(["Please sign in to book listing"]);
+    } 
+
 
     render() {
 
@@ -123,11 +129,13 @@ class BookingForm extends React.Component {
                 () => this.numNights()); 
         }
 
+        const submit = this.state.booker_id !== null ? this.handleSubmit : this.handleNonUser ; 
+
         return (
             
             <div className="booking-form-container">
                 <div className="booking-form-sticky-container">
-                    <form onSubmit={this.handleSubmit} className="booking-form-box">
+                    <form className="booking-form-box">
                         <div className="booking-form-box-price">
                             <h1>${this.props.spot.price_per_night}</h1>
                             <h2>per night</h2>
@@ -165,7 +173,7 @@ class BookingForm extends React.Component {
                         {this.renderMinNights()}
                         {this.renderErrors()}
                         <div className="booking-button-container">
-                            <input className="booking-button" type="submit" value="Create booking" />
+                            <input onClick={submit} className="booking-button" type="submit" value="Create booking" />
                         </div>
                     </form>
                     <p className="booking-psa">Don't worry, you won't be charged.</p>

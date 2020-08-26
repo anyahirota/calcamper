@@ -13,7 +13,7 @@ class BookingIndex extends React.Component {
                 <div className="booking-index">
                     <h1>Your Trips</h1>
                     <ul className="booking-index-list">
-                        {this.props.bookings.map((booking, idx) => (
+                        {this.props.bookings.reverse().map((booking, idx) => (
                             <BookingIndexItem key={idx} booking={booking} spot={this.props.spots[booking.spot_id]} deleteBooking={this.props.deleteBooking} />
                         ))}
                     </ul>

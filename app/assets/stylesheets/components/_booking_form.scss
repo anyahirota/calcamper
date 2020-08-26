@@ -56,24 +56,26 @@
 .guest-inputs {
     display: flex; 
     padding-top: 10px;
+    box-sizing: border-box;
 }
 
 .guest-num {
     font-size: 16px;
     font-weight: 200;
-    padding-left: 12px;
-    padding-right: 12px;
+    width: 25px;
 }
 
 .guest-max-min {
     font-size: 15px;
     color: $border-light-grey;
+    width: 25px;
 }
 
 .guest-inputs > div {
     cursor: pointer;
     font-size: 12px;
     padding-top: 2px;
+    width: 25px;
 }
 
 .min-night-stay {

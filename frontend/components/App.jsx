@@ -26,6 +26,7 @@ import SpotIndexKingsContainer from './spot_index/spot_index_park_containers/spo
 import SpotIndexLassenContainer from './spot_index/spot_index_park_containers/spot_index_lassen_container';
 import SpotIndexTahoeContainer from './spot_index/spot_index_park_containers/spot_index_tahoe_container';
 import SpotIndexYosemiteContainer from './spot_index/spot_index_park_containers/spot_index_yosemite_container'; 
+import BookingIndexContainer from './bookings/booking_index_container'; 
 
 
 const App = () => (
@@ -49,6 +50,7 @@ const App = () => (
         <Route exact path="/spots/lassenvolcanicnationalpark" component={SpotIndexLassenContainer} />
         <Route exact path="/spots/tahoenationalforest" component={SpotIndexTahoeContainer} />
         <Route exact path="/spots/yosemitenationalpark" component={SpotIndexYosemiteContainer} />
+        <ProtectedRoute exact path="/bookings" component={BookingIndexContainer} />
 
         <Route exact path="/spot/:id" component={SpotShowContainer} />
         <Footer />

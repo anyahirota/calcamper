@@ -5,6 +5,7 @@ import './react_dates_overrides.css';
 import { DateRangePicker } from 'react-dates';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { Route, Redirect, withRouter } from 'react-router-dom';
 
 
 class BookingForm extends React.Component {
@@ -109,8 +110,9 @@ class BookingForm extends React.Component {
             check_in_date: this.state.check_in_date["_d"],
             check_out_date: this.state.check_out_date["_d"],
         }
-        debugger
-        this.props.action(booking); 
+
+        this.props.action(booking)
+            .then(() => this.props.history.push('/bookings'))
     }
 
 

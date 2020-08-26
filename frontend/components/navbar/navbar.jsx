@@ -14,7 +14,7 @@ class NavBar extends React.Component {
         );
         const loggedIn = () => (
             <ul className="nav-button-list-logged">
-                <li className="nav-buttons">Trips</li>
+                <li className="nav-buttons"><Link to="/bookings">Trips</Link></li>
                 <li className="nav-buttons">Saves</li>
                 <li className="bear-dropdown-button">
                     <div className="bear-icon">

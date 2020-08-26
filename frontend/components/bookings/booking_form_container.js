@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { createBooking, receiveBookingErrors } from '../../actions/booking_actions'; 
 import BookingForm from './booking_form'; 
-
+import { Route, Redirect, withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch) => ({
     receiveErrors: (errors) => dispatch(receiveBookingErrors(errors))
 })
 
-export default connect(
+export default withRouter (connect(
     mapStateToProps, 
     mapDispatchToProps
-)(BookingForm)
+)(BookingForm))

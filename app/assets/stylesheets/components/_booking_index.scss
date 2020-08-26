@@ -1,0 +1,120 @@
+.booking-index {
+    width: 80%;
+    margin: 0 auto;
+    font-family: $sans-serif;
+    color: $text-black;
+}
+
+.booking-index > h1 {
+    margin: 30px 0px;
+    font-size: 40px;
+}
+
+.booking-index-list {
+    
+}
+
+.booking-index-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.booking-index-item-photo {
+    height: 200px;
+    width: auto;
+}
+
+.booking-index-item-info {
+    height: 200px;
+    border-right: 1px solid $border-light_grey; 
+    border-top: 1px solid $border-light_grey; 
+    border-bottom: 1px solid $border-light_grey; 
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+.booking-index-item-info-top-row {
+    display: flex;
+    font-size: 22px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.booking-index-item-info-top-row > h1 {
+    border-bottom: 1px solid $border-light_grey;
+    padding-bottom: 2px;
+}
+
+.booking-index-item-info-top-row > h1:hover {
+    border-bottom: 1px solid $text-black;
+    cursor: pointer;
+}
+
+.booking-index-item-park {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.booking-index-item-trip-length {
+    padding-top: 12px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.booking-index-item-check-in {
+    margin-top: 5px;
+    display: flex;
+}
+
+.booking-index-item-dates {
+    width: 150px;
+    margin-right: 10px;
+    font-size: 14px;
+    display: flex;
+}
+
+.booking-index-item-dates > :last-child {
+    padding-left: 5px;
+    font-weight: 200;
+}
+
+.booking-index-item-buttons {
+    margin-top: 15px;
+    display: flex; 
+}
+
+.booking-index-item-button {
+    padding: 7px;
+    box-sizing: border-box;
+    color: white;
+    background-color: $turquoise;
+    border-radius: 3px;
+    margin-left: 15px;
+}
+
+.booking-index-item-button:hover {
+    padding: 4px;
+    border: 3px solid $turquoise;
+    color: $turquoise;
+    background-color: white; 
+    cursor: pointer;
+    
+}
+
+.booking-index-item-button-pink {
+    padding: 7px;
+    box-sizing: border-box;
+    color: white;
+    background-color: $pinkish-red;
+    border-radius: 3px;
+}
+
+.booking-index-item-button-pink:hover {
+    padding: 4px;
+    border: 3px solid $pinkish-red;
+    color: $pinkish-red;
+    background-color: white; 
+    cursor: pointer;
+    
+}

@@ -47,7 +47,7 @@ class BookingForm extends React.Component {
                     <p className="guest-max-min">max</p>
                 </div>
             )
-        } else if (this.state.guests === 0) {
+        } else if (this.state.guests === 1) {
             return (
                 <div className="guest-inputs">
                     <p className="guest-max-min">min</p>

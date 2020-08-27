@@ -1,4 +1,5 @@
 .spot-index {
+    position: relative;
     width: 90%;
     margin: 0 auto;
     font-family: $sans-serif;
@@ -56,8 +57,18 @@
     border-color: $turquoise;
 }
 
+.spot-index-no-available {
+    font-size: 30px; 
+    margin-top: 30px;
+}
+
+.spot-index-body {
+    display: flex;
+}
+
 .spot-index-list {
-    width: 70%; 
+    width: 70%;
+    flex-direction: row;
     display: flex;
     flex-wrap: wrap;
 }

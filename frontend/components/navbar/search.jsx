@@ -33,6 +33,12 @@ class Search extends React.Component {
         }
     }
 
+    update() {
+        return e => this.setState({
+            searchInput: e.currentTarget.value
+        });
+    }
+
     renderDefaultText() {
         if (this.state.searchInput === "") {
             return () => this.setState({
@@ -48,6 +54,7 @@ class Search extends React.Component {
                     value={this.state.searchInput}
                     onClick={this.clearInput()}
                 />
+                <br/>
                 <input type="submit" value="Search"/>
             </form>
         )

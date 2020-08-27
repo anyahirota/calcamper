@@ -35,7 +35,7 @@ const App = () => (
     <div>
         <header>
             <CovidBanner />
-            <NavBarContainer />
+            <Route path="/" component={NavBarContainer} />
         </header>
         <Route exact path="/" component={Splash} />
         <Route exact path="/login" component={LoginFormContainer} />

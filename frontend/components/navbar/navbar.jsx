@@ -37,20 +37,32 @@ class NavBar extends React.Component {
         return this.props.currentUser ? loggedIn() : notLoggedIn();
     }
 
+    renderSearchBar() {
+        if (this.props.history.location.pathname === "/") {
+            return (
+                <div></div>
+            )
+        } else {
+            return (
+                <Search history={this.props.history} />
+            )
+        }
+    }
+
     render() {
         return (
             <div>
                 <nav className="nav-bar">
-                    <div>
+                    
                     <div className="logo">
                         <Link to="/">
                             <div className="logo-placeholder">
                                 <img src={window.logoURL} alt="Logo"/>
                             </div>
                         </Link>
+                        {this.renderSearchBar()}
                     </div>
-                        <Search />
-                    </div>
+                   
                     {this.navButtons()}
                     
                     

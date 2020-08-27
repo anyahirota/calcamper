@@ -28,7 +28,7 @@ import SpotIndexTahoeContainer from './spot_index/spot_index_park_containers/spo
 import SpotIndexYosemiteContainer from './spot_index/spot_index_park_containers/spot_index_yosemite_container'; 
 import BookingIndexContainer from './bookings/booking_index_container';
 import EditBookingFormContainer from './bookings/edit_booking_form_container';
-import SearchContainer from './spot_index/search_container';   
+
 
 
 const App = () => (
@@ -41,7 +41,6 @@ const App = () => (
         <Route exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path="/demo" component={DemoFormContainer} />
-        <Route exact path="/spots" component={SearchContainer} />
         <Route exact path="/spots/camping" component={SpotIndexCampingContainer} />
         <Route exact path="/spots/glamping" component={SpotIndexGlampingContainer} />
         <Route exact path="/spots/rv" component={SpotIndexRVContainer} />

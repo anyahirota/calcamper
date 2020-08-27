@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Search from './search'; 
 
 
 class NavBar extends React.Component {
@@ -40,12 +41,15 @@ class NavBar extends React.Component {
         return (
             <div>
                 <nav className="nav-bar">
+                    <div>
                     <div className="logo">
                         <Link to="/">
                             <div className="logo-placeholder">
                                 <img src={window.logoURL} alt="Logo"/>
                             </div>
                         </Link>
+                    </div>
+                        <Search />
                     </div>
                     {this.navButtons()}
                     

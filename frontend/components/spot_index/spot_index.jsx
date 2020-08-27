@@ -45,7 +45,8 @@ class SpotIndex extends React.Component {
     renderMap() {
     
         if ((this.props.spots[0].park === this.props.park && this.props.spots[this.props.spots.length - 1].park === this.props.park) || 
-            (this.props.park === "all" && this.props.spots.length < 23)) {
+            (this.props.park === "all" && this.props.spots.length < 23) ||
+            (this.props.park === "all" && this.state.cat === "all")) {
                 return (
                 <SpotMap park={this.props.park} spots={this.props.spots} />
             )

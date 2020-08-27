@@ -1,0 +1,65 @@
+.splash-search-bar-container {
+    height: 100px; 
+    margin: 15px 0px 70px 0px;
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid $border-light-grey;
+    box-sizing: border-box; 
+    padding: 18px;
+    box-shadow: 0 0 5px 2px rgba(235, 235, 235, 0.7);
+    position: relative;  
+}
+
+.splash-search-bar {
+    display: flex;
+    width: 100%;
+}
+
+.splash-search-bar-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 64px; 
+    display: flex; 
+    border: 1px solid $border-light-grey;
+    box-shadow: 0 0 5px 1px rgba(235, 235, 235, 0.5); 
+    box-sizing: border-box; 
+    padding: 15px;
+    font-size: 18px;
+}
+
+.splash-search-bar-input > :first-child {
+    margin-right: 15px;
+}
+
+.splash-search-bar-input > input {
+    width: 100%;
+} 
+
+.splash-search-bar-button {
+    margin-left: 18px; 
+    width: 110px;
+    height: 64px; 
+    color: white;
+    background-color: $turquoise;
+    border-radius: 2px;
+    box-sizing: border-box; 
+    text-align: center;
+   
+}
+
+.splash-search-bar-button:hover {
+    color: $turquoise;
+    background-color: white;
+    border: 3px solid $turquoise; 
+}
+
+.defaultTextSplash {
+    color: $grey;
+}
+
+#splash-search-list-container {
+    top: 85px; 
+    width: 90%; 
+    left: 25px; 
+}

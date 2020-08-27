@@ -2,15 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SplashExperience from './splash_experience'; 
 import SplashParks from './splash_parks'; 
+import SplashSearch from './splash_search'; 
 
-const Splash = () => {
+const Splash = (props) => {
+    
+
     return (
+
         <div className="splash">
             <div className="splash-header-message">
                 <h1>Find yourself in CA's great outdoors.</h1>
                 <h2>Discover and book tent camping, RV parks, cabins, and glamping in some of California's beautiful national parks.</h2>
             </div>
-            {/* search bar */}
+            {<SplashSearch history={props.history}/>}
             <div className="splash-hosting">
                 <img src={window.friends} alt="host" />
                 <div className="splash-hosting-block">

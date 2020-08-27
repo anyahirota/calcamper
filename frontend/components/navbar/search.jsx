@@ -17,9 +17,12 @@ class Search extends React.Component {
                 "Lassen Volcanic National Park", 
                 "Tahoe National Forest", 
                 "Yosemite National Park", 
-            ]
+            ], 
+            showDropdown: false
         }; 
         this.handleSubmit = this.handleSubmit.bind(this); 
+        this.closeDropdown = this.closeDropdown.bind(this);
+        this.openDropdown = this.openDropdown.bind(this);
     }
 
     availableParks() {
@@ -41,7 +44,8 @@ class Search extends React.Component {
 
     updateFromList(park) {
         return (e) => this.setState({
-            searchInput: park
+            searchInput: park, 
+            showDropdown: false
         });
     }
 
@@ -85,25 +89,34 @@ class Search extends React.Component {
         if (parkList.length > 0) {
             const park = parkList[0]; 
             const parkPath = this.parkPath(park); 
-            this.setState({ searchInput: park}, () => {
+            this.setState({ searchInput: park, showDropdown: false}, () => {
                 this.props.history.push(`/spots/${parkPath}`)
             })
         }  
         
     }
 
-    clearInput() {
-        if (this.state.defaultText === this.state.searchInput) {
-            return () => this.setState({
-                searchInput: ""
-            });
-        }
+    openDropdown() {
+        this.setState({ showDropdown: true }, () => {
+            document.addEventListener('click', this.closeDropdown);
+            if (this.state.defaultText === this.state.searchInput) {
+                this.setState({ searchInput: ""});
+            }
+        });
+    }
+
+    closeDropdown() {
+        this.setState({ showDropdown: false }, () => {
+            document.removeEventListener('click', this.closeDropdown);
+            if (this.state.searchInput === "") {
+                this.setState({ searchInput: "Try Yosemite, Big Sur..." });
+            }
+        });
     }
 
     update() {
         return e => this.setState({
-            searchInput: e.currentTarget.value
-        });
+            searchInput: e.currentTarget.value })
     }
 
     renderDefaultText() {
@@ -125,12 +138,17 @@ class Search extends React.Component {
                     <input type="text"
                         className={defaultTextStyles}
                         value={this.state.searchInput}
-                        onClick={this.clearInput()}
+                        onClick={this.openDropdown}
                         onChange={this.update()}
                     />
                     {/* <br/>
                     <input type="submit" value="Search"/> */}
-                    {this.parkSearchDropdown()}
+                    {this.state.showDropdown
+                            ? (
+                                this.parkSearchDropdown()
+                        ) : (
+                            null
+                        )}
                 </form>
             </div>
         )

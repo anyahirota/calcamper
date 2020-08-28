@@ -24,7 +24,7 @@ const FooterContent = () => {
                             Ruby on Rails
                         </li>
                         <li>
-                            ReactRedux
+                            React/Redux
                         </li>
                         <li>
                             HTML

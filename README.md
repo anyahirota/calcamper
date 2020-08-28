@@ -11,8 +11,8 @@ Check out the live site [here](https://calcamper.herokuapp.com/).
 * PostgreSQL
 
 * Ruby on Rails
- * Rails 5.2.4.3
-
+  * Rails version 5.2.4.3
+  
 * React/Redux
 
 * HTML

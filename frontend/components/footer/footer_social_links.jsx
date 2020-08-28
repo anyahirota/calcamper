@@ -13,8 +13,8 @@ const FooterSocialLinks = () => {
             </div>
 
             <ul className="footer-socials">
-                <li><FontAwesomeIcon icon={faLinkedin} /></li>
-                <li><FontAwesomeIcon icon={faGithub} /></li>
+                <li><a href="https://www.linkedin.com/in/anya-hirota-59392560/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                <li><a href="https://github.com/anyahirota"><FontAwesomeIcon icon={faGithub} /></a></li>
             </ul>
 
         </div>

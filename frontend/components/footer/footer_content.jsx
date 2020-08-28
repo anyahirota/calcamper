@@ -38,7 +38,7 @@ const FooterContent = () => {
 
             <div className="footer-app-overview">
                 <p>CalCamper is inspired by and designed in the spirit of Hipcamp.</p>
-                <p>Description of Site...</p>
+                <p>On CalCamper, you can search for, view, and book campsites, lodgings, and rv parks located in California's greatest parks. For more information about this full-stack project, check it out on <a href="https://github.com/anyahirota/hipcamp-clone">Github</a>.</p>
             </div>
             
         </div>

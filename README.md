@@ -11,6 +11,7 @@ Check out the live site [here](https://calcamper.herokuapp.com/).
 * PostgreSQL
 
 * Ruby on Rails
+ * Rails 5.2.4.3
 
 * React/Redux
 
@@ -18,23 +19,17 @@ Check out the live site [here](https://calcamper.herokuapp.com/).
 
 * CSS
 
+# Features
 
-Things you may want to cover:
+# Future Action Points
 
-* Ruby version
+* Create interactive Google Maps markers
 
-* System dependencies
+* Create listing reviews feature
 
-* Configuration
+* Create listing saves feature
 
-* Database creation
+* Integrate a "distance from current location" and "weather in listing location" functionality
 
-* Database initialization
+* Create the ability to block specified calendar dates
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

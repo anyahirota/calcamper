@@ -1,8 +1,30 @@
-.modal-screen { 
+.login-form-background { 
     z-index: 11;
     position: fixed;
     background: white;
-    opacity: 0.8;
+    opacity: 0.9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.signup-form-background { 
+    z-index: 11;
+    position: fixed;
+    background: white;
+    opacity: 0.9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.demo-form-background { 
+    z-index: 11;
+    position: fixed;
+    background: white;
+    opacity: 0.9;
     top: 0;
     bottom: 0;
     left: 0;
@@ -126,14 +148,15 @@
 
 .alternative-login-link > :last-child {
     font-weight: 600;
+    cursor: pointer;
 }
 
-.alternative-login-link > :last-child > a {
+.alternative-login-link > :last-child > p {
     padding-bottom: 3px;
     border-bottom: 1px solid $border-light-grey;
 }
 
-.alternative-login-link > :last-child > a:hover{
+.alternative-login-link > :last-child > p:hover {
     border-bottom: 1px solid $text-black;
 }
 

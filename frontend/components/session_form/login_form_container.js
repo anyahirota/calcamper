@@ -4,20 +4,22 @@ import { Link } from 'react-router-dom';
 import { login, receiveErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
-const mapStateToProps = ({ errors, session}) => {
+const mapStateToProps = (state, ownProps) => {
     return {
         user: { 
             email: "Email", 
             password: "Password"
         },
-        errors: errors.session,
+        errors: state.errors.session,
         formType: 'login',
-        navLink: <Link to="/signup">Sign up!</Link>,
+        navLink: "Sign up!",
         headerMessage: "Welcome back!",
         headerSubMessage: "Let's get you outside.",
         footerMessage: "Don't have a CalCamper account?", 
         buttonMessage: "Log in", 
-        currentUser: session.id  
+        currentUser: state.session.id, 
+        closeModal: () => ownProps.closeModal(),  
+        openModal: () => ownProps.openModal(),
     };
 };
 

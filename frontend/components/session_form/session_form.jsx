@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
         super(props);
         this.state = this.props.user;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.openOtherModal = this.openOtherModal.bind(this); 
     }
 
     componentDidMount() {
@@ -65,7 +66,13 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user)
+            .then(() => {
+                if (this.props.errors.length < 1) {
+                    this.props.closeModal();
+                }
+            });  
+        
     }
 
     renderErrors() {
@@ -78,6 +85,11 @@ class SessionForm extends React.Component {
                 ))}
             </ul>
         );
+    }
+
+    openOtherModal() {
+        this.props.closeModal()
+        this.props.openModal(); 
     }
 
     render() {
@@ -96,41 +108,37 @@ class SessionForm extends React.Component {
             )
         } else {
         return (
-            <div className="login-form-container">
-                <div className="some-space"></div>
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <div className="form-messages">
-                        <p className="form-header-message">{this.props.headerMessage}</p>
-                        <p className="form-header-submessage">{this.props.headerSubMessage}</p>
-                    </div>
-                    {this.renderErrors()}
-                    
-                    <div className="login-form">
-                        {this.names()}
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update("email")}
-                            className="login-input"
-                            onClick={this.clearInput("email")}
-                        />
-                        <br/>
-                        <input type={passwordType}
-                            value={this.state.password}
-                            onChange={this.update("password")}
-                            className="login-input"
-                            onClick={this.clearInput("password")}
-                        />
-                        <br/>
-                        <input className="login-button" type="submit" value={this.props.buttonMessage}/>
-                    </div>
-                    {this.terms()}
-                    <div className="alternative-login-link">
-                        <p>{this.props.footerMessage}</p>
-                        <p>{this.props.navLink}</p>
-                    </div>
-                </form>
-                <div onClick={this.goBack()} className="modal-screen"> </div>
-            </div>
+            <form onSubmit={this.handleSubmit} className="login-form-box">
+                <div className="form-messages">
+                    <p className="form-header-message">{this.props.headerMessage}</p>
+                    <p className="form-header-submessage">{this.props.headerSubMessage}</p>
+                </div>
+                {this.renderErrors()}
+                
+                <div className="login-form">
+                    {this.names()}
+                    <input type="text"
+                        value={this.state.email}
+                        onChange={this.update("email")}
+                        className="login-input"
+                        onClick={this.clearInput("email")}
+                    />
+                    <br/>
+                    <input type={passwordType}
+                        value={this.state.password}
+                        onChange={this.update("password")}
+                        className="login-input"
+                        onClick={this.clearInput("password")}
+                    />
+                    <br/>
+                    <input className="login-button" type="submit" value={this.props.buttonMessage}/>
+                </div>
+                {this.terms()}
+                <div className="alternative-login-link">
+                    <p>{this.props.footerMessage}</p>
+                    <div onClick={this.openOtherModal}><p>{this.props.navLink}</p></div>
+                </div>
+            </form>
         )}
     }
 

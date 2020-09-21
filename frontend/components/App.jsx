@@ -38,9 +38,9 @@ const App = () => (
             <Route path="/" component={NavBarContainer} />
         </header>
         <Route exact path="/" component={Splash} />
-        <Route exact path="/login" component={LoginFormContainer} />
+        {/* <Route exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path="/demo" component={DemoFormContainer} />
+        <Route exact path="/demo" component={DemoFormContainer} /> */}
         <Route exact path="/spots/camping" component={SpotIndexCampingContainer} />
         <Route exact path="/spots/glamping" component={SpotIndexGlampingContainer} />
         <Route exact path="/spots/rv" component={SpotIndexRVContainer} />

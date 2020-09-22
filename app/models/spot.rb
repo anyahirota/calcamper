@@ -24,6 +24,11 @@ class Spot < ApplicationRecord
     has_many :guests, 
         through: :bookings, 
         source: :guest
+    
+    has_many :reviews, 
+        primary_key: :id, 
+        foreign_key: :spot_id, 
+        class_name: :Review
 
     def ensure_maximum_occupancy
         self.maximum_occupancy ||= (self.sites * self.guests_per_site)

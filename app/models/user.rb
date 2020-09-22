@@ -25,6 +25,11 @@ class User < ApplicationRecord
         through: :bookings, 
         source: :spot
 
+    has_many :reviews, 
+        primary_key: :id, 
+        foreign_key: :author_id, 
+        class_name: :Review
+
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
         if user && user.is_password?(password)

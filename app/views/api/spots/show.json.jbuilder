@@ -7,3 +7,13 @@ end
 json.host do 
     json.partial! "api/users/user", user: @spot.host
 end 
+
+json.reviews do 
+    @spot.reviews.each do |review|
+        json.set! review.id do 
+            json.partial! "api/reviews/review", review: review
+            json.author_fname review.author.first_name
+            json.author_lname review.author.last_name
+        end 
+    end 
+end 

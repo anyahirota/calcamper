@@ -9,7 +9,7 @@ class BookingIndex extends React.Component {
 
     render() {
         if (Object.values(this.props.spots).length >= 23) {
-            const newToOld = this.props.bookings.reverse()
+            const newToOld = this.props.bookings.reverse(); 
             return (
                 <div className="booking-index">
                     <h1>Your Trips</h1>

@@ -8,6 +8,7 @@ import SpotActivities from "./spot_activities";
 import SpotVibe from "./spot_vibe";
 import SpotHeaderPhotos from "./spot_header_photos";
 import BookingFormContainer from "../bookings/booking_form_container";  
+import SpotReviews from "../reviews/spot_reviews"; 
 
 
 class SpotShow extends React.Component {
@@ -32,7 +33,7 @@ class SpotShow extends React.Component {
                             <SpotActivities spot={this.props.spot} />
                             <SpotTerrain spot={this.props.spot} />
                             <SpotVibe spot={this.props.spot} />
-                            
+                            <SpotReviews spot={this.props.spot} reviews={this.props.reviews}/>
                         </div>
                     </div >
                 )

@@ -45,7 +45,6 @@ class ReviewCreateForm extends React.Component {
       title: this.state.title,
       body: this.state.body,
     }
-    debugger; 
     this.props.action(review)
         .then(() => this.props.receiveErrors([]))
         .then(() => {

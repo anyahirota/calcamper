@@ -113,8 +113,6 @@ class BookingForm extends React.Component {
             check_out_date: this.state.check_out_date["_d"],
         }
 
-        debugger; 
-
         this.props.action(booking)
             .then(() => this.props.history.push('/bookings'))
     }

@@ -67,11 +67,10 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-            .then(() => {
-                if (this.props.errors.length < 1) {
-                    this.props.closeModal();
-                }
-            });  
+            .then(() => this.props.receiveErrors([]))
+            .then(() => this.props.receiveBookingErrors([]))
+            .then(() => this.props.closeModal())
+             
         
     }
 

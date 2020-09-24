@@ -105,13 +105,15 @@ class BookingForm extends React.Component {
         e.preventDefault();
         const booking = {
             spot_id: this.state.spot_id,
-            booker_id: this.state.booker_id,
+            booker_id: this.props.booking.booker_id,
             total_nights: this.state.total_nights,
             total_price: this.state.total_price,
             guests: this.state.guests,
             check_in_date: this.state.check_in_date["_d"],
             check_out_date: this.state.check_out_date["_d"],
         }
+
+        debugger; 
 
         this.props.action(booking)
             .then(() => this.props.history.push('/bookings'))
@@ -130,7 +132,7 @@ class BookingForm extends React.Component {
                 () => this.numNights()); 
         }
 
-        const submit = this.state.booker_id !== null ? this.handleSubmit : this.handleNonUser ; 
+        const submit = this.props.booking.booker_id !== null ? this.handleSubmit : this.handleNonUser ; 
 
         return (
             

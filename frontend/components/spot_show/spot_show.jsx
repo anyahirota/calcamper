@@ -33,7 +33,7 @@ class SpotShow extends React.Component {
                             <SpotActivities spot={this.props.spot} />
                             <SpotTerrain spot={this.props.spot} />
                             <SpotVibe spot={this.props.spot} />
-                            <SpotReviews spot={this.props.spot} reviews={this.props.reviews}/>
+                            <SpotReviews spot={this.props.spot} reviews={this.props.reviews} currentUser={this.props.currentUser}/>
                         </div>
                     </div >
                 )

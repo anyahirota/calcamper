@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
         spot,
         host: selectSpotHost(state, spot),
         reviews: Object.values(state.entities.reviews),
+        currentUser: state.session.id,
     };}
 
 const mapDispatchToProps = (dispatch) => ({

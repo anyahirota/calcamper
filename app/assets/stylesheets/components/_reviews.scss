@@ -5,7 +5,7 @@
 
 .your-review-index-item-photo {
     width: 300px; 
-    height: 210px;
+    height: 225px;
 }
 
 .your-review-index-item-photo {
@@ -13,7 +13,7 @@
 }
 
 .your-review-index-item-info {
-    height: 210px;
+    height: 225px;
     width: 420px;
     border-right: 1px solid $border-light_grey; 
     border-top: 1px solid $border-light_grey; 
@@ -52,16 +52,23 @@
     margin-bottom: 10px;
 }
 
+.your-review-date-made {
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 7px;
+    color: $grey;
+}
+
 .your-review-body {
     padding: 10px 10px;
     height: 80px; 
     border: 1px solid $border-light_grey; 
     overflow: auto; 
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 .your-review-body > p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
 }
 

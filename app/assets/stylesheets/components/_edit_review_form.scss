@@ -1,0 +1,41 @@
+.review-edit-form-container {
+    font-family: $sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    color: $text-black; 
+}
+
+.review-edit-form {
+    max-width: 700px;
+    width: 60%; 
+    border: 1px solid $border-light-grey;
+    box-sizing: border-box; 
+    padding: 18px;
+    box-shadow: 0 0 5px 2px rgba(235, 235, 235, 0.7);
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-edit-form > h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.review-edit-delete-button { 
+    margin-top: 15px; 
+    color: $pinkish-red; 
+    text-align: center;
+    font-weight: 600;
+    box-sizing: border-box;
+    font-size: 16px; 
+    border-bottom: 1px solid $border-light-grey;
+}
+
+.review-edit-delete-button:hover {
+    background-color: white;
+    color: $pinkish-red;
+    border-bottom: 1px solid $pinkish-red;
+}

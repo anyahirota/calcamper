@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import moment from "moment";
 
 const ReviewIndexItem = ({ review, spot, deleteReview }) => {
+    const date = moment(review.created_at).format("MMMM Do[,] YYYY");
     return (
         <li className="your-review-index-item">
             <div className="your-review-index-item-photo">
@@ -29,8 +31,9 @@ const ReviewIndexItem = ({ review, spot, deleteReview }) => {
                 <div className="your-review-body">
                     <p>{review.body}</p>
                 </div>
+                <p className="your-review-date-made">{date}</p>
                 <div className="your-review-index-item-buttons">
-                    <div className="booking-index-item-button-pink">Edit Review</div>
+                    <Link to={`/reviews/${review.id}`}><div className="booking-index-item-button-pink">Edit Review</div></Link>
                     <div className="booking-index-item-button" onClick={() => deleteReview(review.id)}>Delete Review</div>
                 </div>
             </div>

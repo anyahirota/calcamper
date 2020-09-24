@@ -1,5 +1,10 @@
 import { connect } from 'react-redux';
-import { updateBooking, receiveBookingErrors } from '../../actions/booking_actions';
+import {
+  updateBooking,
+  receiveBookingErrors,
+  fetchBookings,
+} from "../../actions/booking_actions";
+import { requestSpots } from "../../actions/spot_actions";
 import EditBookingPreForm from './edit_booking_pre_form'; 
 import {selectBookingSpot} from '../../reducers/selectors';
 

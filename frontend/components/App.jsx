@@ -29,7 +29,7 @@ import SpotIndexYosemiteContainer from './spot_index/spot_index_park_containers/
 import BookingIndexContainer from './bookings/booking_index_container';
 import EditBookingFormContainer from './bookings/edit_booking_form_container';
 import ReviewIndexContainer from './reviews/review_index_container'; 
-
+import EditReviewFormContainer from "./reviews/edit_review_form_container"; 
 
 
 const App = () => (
@@ -88,6 +88,7 @@ const App = () => (
     />
     <Route exact path="/spot/:id" component={SpotShowContainer} />
     <Route exact path="/reviews" component={ReviewIndexContainer} />
+    <Route exact path="/reviews/:id" component={EditReviewFormContainer} />
     <Footer />
   </div>
 );

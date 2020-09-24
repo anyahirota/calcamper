@@ -1,3 +1,52 @@
 .spot-reviews {
     font-family: $sans-serif;
+    width: 70%; 
+    border-top: 1px solid $border-light-grey;
+    padding-top: 30px;
 }
+
+.spot-reviews > h1 {
+    font-weight: 600;
+    margin-bottom: 30px; 
+}
+
+.spot-review-index-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.spot-review-author {
+    width: 80px; 
+    margin-right: 20px;  
+    text-align: center;
+}
+
+.spot-review-author > :first-child{
+    width: 80px; 
+    font-size: 70px;
+}
+
+.spot-review-author > :last-child{
+    font-size: 15px;
+}
+
+.spot-review-title-body > h1 {
+    padding: 25px 0px 10px 0px; 
+    font-size: 20px;
+    font-weight: 600; 
+}
+
+.spot-review-title-body > :last-child{
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.spot-review-date {
+    font-size: 13px;
+    font-weight: 200;
+    color: $grey;
+    margin-bottom: 10px;
+}
+
+
+

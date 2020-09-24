@@ -133,25 +133,35 @@ class NavBar extends React.Component {
             </div>
         );
         const loggedIn = () => (
-            <ul className="nav-button-list-logged">
-                <li className="nav-buttons"><Link to="/bookings">Trips</Link></li>
-                <li className="nav-buttons">Saves</li>
-                <li className="bear-dropdown-button">
-                    <div className="bear-icon">
-                        <img src={window.reddishBear} alt="Logo" />
-                    </div>
-                    <div className="bear-dropdown hidden" >
-                        <div className="dropdown-area"></div>
-                        <div className="arrow"></div>
-                        <div className="empty-arrow"></div>
-                        <ul className="bear-dropdown-ul">
-                            <li>
-                                <button className="dropdown-button" onClick={this.props.logout}>Log Out</button>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+          <ul className="nav-button-list-logged">
+            <li className="nav-buttons">
+              <Link to="/bookings">Trips</Link>
+            </li>
+            <li className="nav-buttons">Saves</li>
+            <li className="bear-dropdown-button">
+              <div className="bear-icon">
+                <img src={window.reddishBear} alt="Logo" />
+              </div>
+              <div className="bear-dropdown hidden">
+                <div className="dropdown-area"></div>
+                <div className="arrow"></div>
+                <div className="empty-arrow"></div>
+                <ul className="bear-dropdown-ul">
+                  <li>
+                    <div id="first-dropdown-button" className="dropdown-button">Your Reviews</div>
+                  </li>
+                  <li>
+                    <button
+                      className="dropdown-button"
+                      onClick={this.props.logout}
+                    >
+                      Log Out
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         );
         return this.props.currentUser ? loggedIn() : notLoggedIn();
     }

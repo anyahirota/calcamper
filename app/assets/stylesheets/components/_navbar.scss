@@ -121,8 +121,9 @@
 }
 
  .dropdown-button {
-     padding-bottom: 12px;
+     padding: 12px 0px;
      width: 200px;
+     cursor: pointer;
  }
 
  .dropdown-button:hover {
@@ -131,7 +132,10 @@
 
 .bear-dropdown-button:hover > .bear-dropdown {
     display: block; 
+}
 
+#first-dropdown-button {
+    padding-top: 0px;
 }
 
 .bear-icon {

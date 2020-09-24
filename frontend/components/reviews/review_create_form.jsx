@@ -40,6 +40,7 @@ class ReviewCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state)
+        .then(() => this.props.receiveErrors([]))
         .then(() => {
             this.setState({
               title: this.props.review.title,

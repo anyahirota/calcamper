@@ -148,7 +148,14 @@ class NavBar extends React.Component {
                 <div className="empty-arrow"></div>
                 <ul className="bear-dropdown-ul">
                   <li>
-                    <div id="first-dropdown-button" className="dropdown-button">Your Reviews</div>
+                    <Link to="/reviews">
+                      <div
+                        id="first-dropdown-button"
+                        className="dropdown-button"
+                      >
+                        Your Reviews
+                      </div>
+                    </Link>
                   </li>
                   <li>
                     <button

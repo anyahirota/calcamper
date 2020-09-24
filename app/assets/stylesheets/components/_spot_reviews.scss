@@ -1,0 +1,116 @@
+.spot-reviews {
+    font-family: $sans-serif;
+    width: 70%; 
+    border-top: 1px solid $border-light-grey;
+    padding-top: 30px;
+}
+
+.spot-reviews > h1 {
+    font-weight: 600;
+    margin-bottom: 30px; 
+}
+
+.spot-review-index-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.spot-review-author {
+    width: 80px; 
+    margin-right: 20px;  
+    text-align: center;
+}
+
+.spot-review-author > :first-child{
+    width: 80px; 
+    font-size: 70px;
+}
+
+.spot-review-author > :last-child{
+    font-size: 15px;
+}
+
+.spot-review-title-body > h1 {
+    padding: 25px 0px 10px 0px; 
+    font-size: 20px;
+    font-weight: 600; 
+}
+
+.spot-review-title-body > :last-child{
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.spot-review-date {
+    font-size: 13px;
+    font-weight: 200;
+    color: $grey;
+    margin-bottom: 10px;
+}
+
+.review-form-container {
+    margin-bottom: 30px; 
+}
+
+.review-form {
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid $border-light-grey;
+    box-sizing: border-box; 
+    padding: 18px;
+    box-shadow: 0 0 5px 2px rgba(235, 235, 235, 0.7);
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-form-title-input {
+    width: 100%;
+    border: 1px solid $border-light-grey;
+    box-sizing: border-box; 
+    height: 68px; 
+    margin-bottom: 15px;
+    padding: 15px; 
+}
+
+.review-form-body-input {
+    width: 100%;
+    border: 1px solid $border-light-grey; 
+    padding: 15px; 
+    margin-bottom: 15px;
+}
+
+.review-form > h1 {
+    width: 100%;
+    font-size: 25px; 
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.review-create-submit-button {
+    height: 50px; 
+    background-color: $turquoise;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 50%; 
+}
+
+.review-create-submit-button:hover {
+    background-color: white;
+    color: $turquoise;
+    border: 3px solid $turquoise;
+}
+
+
+
+
+
+
+
+
+

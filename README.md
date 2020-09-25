@@ -91,6 +91,39 @@ renderCorrectSpotType() {
 
 - **Book Listing (CRUD Feature)**
 
+Users can create, view, update, destroy bookings. The booking create form is located on the each listing page. Users must be logged in to create a booking. To view bookings, logged in users can navigate to the "Trips" page, linked in the nav bar. When on the "Trips" page, users can either update or cancel their bookings. The create and update forms use the React-dates package to allow for complex date picking. 
+
+
+<p align="center">
+  <img height="auto" width="900" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/create+booking+form.png">
+</p>
+
+<p align="center">
+  <strong>Create Booking</strong>
+</p>
+
+<p align="center">
+  <img height="auto" width="300" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/create_booking1.png">
+</p>
+<p align="center">
+  <img height="auto" width="300" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/create_booking2.png">
+</p>
+
+<p align="center">
+  <strong>View Bookings</strong>
+</p>
+
+<p align="center">
+  <img height="auto" width="700" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/view_bookings.png">
+</p>
+
+<p align="center">
+  <strong>Update Booking</strong>
+</p>
+<p align="center">
+  <img height="auto" width="300" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/update_booking.png">
+</p>
+
 - **Add a Review (CRUD Feature)**
 
 

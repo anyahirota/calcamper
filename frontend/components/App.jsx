@@ -87,8 +87,12 @@ const App = () => (
       component={EditBookingFormContainer}
     />
     <Route exact path="/spot/:id" component={SpotShowContainer} />
-    <Route exact path="/reviews" component={ReviewIndexContainer} />
-    <Route exact path="/reviews/:id" component={EditReviewFormContainer} />
+    <ProtectedRoute exact path="/reviews" component={ReviewIndexContainer} />
+    <ProtectedRoute
+      exact
+      path="/reviews/:id"
+      component={EditReviewFormContainer}
+    />
     <Footer />
   </div>
 );

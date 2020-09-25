@@ -20,9 +20,11 @@ Check out the live site [here](https://calcamper.herokuapp.com/).
 
 Users can search for listings using the search bar located towards the top of the splash page or in the nav bar of all other pages. The search bars filter listings by park name. As the user types in a park name, the search bar dropdown will list all available parks matching the user input. The user can click on a dropdown item or press enter to bring them to the listing index page of choice. 
 
-<img align="center" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/search_bar_screenshot.png" alt="logo" height="auto" width="900"/> 
+<img align="center" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/splash_search_bar.png" alt="logo" height="auto" width="900"/> 
 
 Listing index pages show all available listings by the user's selected park or category (camping, glamping, RV) and can be filtered further by selecting the category button located at the top of the page. Listing index pages display high level information about each listing, including the listing's name, cost, and park, as well as the listing's location, enabled by the Google Maps API.  
+
+<img align="center" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/search_bar_screenshot.png" alt="logo" height="auto" width="900"/> 
 
 - **Browse Listing Amenities** 
 

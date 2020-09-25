@@ -20,13 +20,74 @@ Check out the live site [here](https://calcamper.herokuapp.com/).
 
 Users can search for listings using the search bar located towards the top of the splash page or in the nav bar of all other pages. The search bars filter listings by park name. As the user types in a park name, the search bar dropdown will list all available parks matching the user input. The user can click on a dropdown item or press enter to bring them to the listing index page of choice. 
 
-<img align="center" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/splash_search_bar.png" alt="logo" height="auto" width="900"/> 
+<p align="center">
+  <img src="https://calcamper-seed.s3-us-west-1.amazonaws.com/splash_search_bar.png" alt="logo" height="auto" width="900"/> 
+</p>
 
 Listing index pages show all available listings by the user's selected park or category (camping, glamping, RV) and can be filtered further by selecting the category button located at the top of the page. Listing index pages display high level information about each listing, including the listing's name, cost, and park, as well as the listing's location, enabled by the Google Maps API.  
 
+<p align="center">
 <img align="center" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/search_bar_screenshot.png" alt="logo" height="auto" width="900"/> 
+</p>
 
 - **Browse Listing Amenities** 
+
+Once on the listing page, users can view all the different features that listing has on offer. The comprehensive information available about the listing allows users to make well-informed booking decisions. 
+
+<p align="center">
+  <img src="https://calcamper-seed.s3-us-west-1.amazonaws.com/gif1.gif">
+</p>
+
+These listing pages were developed using a boolean-based detail entry system to more efficiently seed listing information. Within the listing's react component, conditions were utilized to dynamically categorize amenities as present or not present to customize HTML and CSS. An example of these conditions is displayed below:
+
+```
+booleanEntries(attributeName) {
+    if (this.props.spot[attributeName] !== true) {
+        return "amenity-false"
+    }
+}
+
+renderCorrectSpotType() {
+    const byot = this.props.spot.bring_your_own_tents ? "Bring your own tents" : "Tents provided";
+    const pat = this.props.spot.park_at_listing ? "Park at listing" : "No parking at listing"; 
+    const ada = this.props.spot.ada_access ? "ADA access" : "No ADA access";
+
+    let heading;
+    if (this.props.spot.spot_type === "RV") {
+        heading = "RV camping area"; 
+    } else if (this.props.spot.spot_type === "camping") {
+        heading = "Campsite area";
+    } else {
+        heading = "Lodging provided";
+    }
+
+    let firstItem; 
+    if (this.props.spot.spot_type === "glamping") {
+        const name = this.props.spot.lodging_type;
+        const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
+        firstItem = (
+            <li>
+                <div className="box-icons"><FontAwesomeIcon icon={faHome} /></div>
+                <p>{nameCapitalized}</p>
+            </li>
+        )
+    } else {
+        firstItem = (
+            <li className={this.booleanEntries("bring_your_own_tents")}>
+                <div className="box-icons"><FontAwesomeIcon icon={faCampground} /></div>
+                <p>{byot}</p>
+            </li>
+        )
+    }
+    
+    return (
+        <ul className="amenity-box">
+            <h1>{heading}</h1>
+            {firstItem}
+        </ul>
+    )
+}
+```
 
 - **Book Listing (CRUD Feature)**
 

@@ -16,7 +16,7 @@ Check out the live site [here](https://calcamper.herokuapp.com/).
 - React-dates
 
 # Key Features
-- **Search for Listings** 
+### Search for Listings
 
 Users can search for listings using the search bar located towards the top of the splash page or in the nav bar of all other pages. The search bars filter listings by park name. As the user types in a park name, the search bar dropdown will list all available parks matching the user input. The user can click on a dropdown item or press enter to bring them to the listing index page of choice. 
 
@@ -30,7 +30,7 @@ Listing index pages show all available listings by the user's selected park or c
 <img align="center" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/search_bar_screenshot.png" alt="logo" height="auto" width="900"/> 
 </p>
 
-- **Browse Listing Amenities** 
+### Browse Listing Amenities 
 
 Once on the listing page, users can view all the different features that listing has on offer. The comprehensive information available about the listing allows users to make well-informed booking decisions. 
 
@@ -89,9 +89,9 @@ renderCorrectSpotType() {
 }
 ```
 
-- **Book Listing (CRUD Feature)**
+### Book Listing (CRUD Feature)
 
-Users can create, view, update, destroy bookings. The booking create form is located on the each listing page. Users must be logged in to create a booking. To view bookings, logged in users can navigate to the "Trips" page, linked in the nav bar. When on the "Trips" page, users can either update or cancel their bookings. The create and update forms use the React-dates package to allow for complex date picking. 
+Users can create, view, update, and destroy bookings. The create bookings form is located on each listing page. Users must be logged in to create a booking. To view bookings, logged in users can navigate to the "Trips" page, linked in the nav bar. When on the "Trips" page, users can either update or cancel their bookings. The create and update forms use the React-dates package to allow for complex date picking. 
 
 
 <p align="center">
@@ -124,8 +124,45 @@ Users can create, view, update, destroy bookings. The booking create form is loc
   <img height="auto" width="300" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/update_booking.png">
 </p>
 
-- **Add a Review (CRUD Feature)**
+### Add a Review (CRUD Feature)
 
+While all users are able to view listing reviews located at the bottom of each listing show page, logged in users are able to create reviews, view the reviews they have written, and update or destroy their reviews. 
+
+<p align="center">
+  <img src="https://calcamper-seed.s3-us-west-1.amazonaws.com/gif2.gif">
+</p>
+
+Once, logged in, a create review form will appear above the written reviews on each listing page. The review will immediately appear on the listing page once it is submitted. To view all reviews written by the user, a user can navigate to the "Your Reviews" page linked in the dropdown of the nav bar. The user can update or destroy their reviews by either clicking the update button of the review on the listing page or "Your Reviews" page. 
+
+<p align="center">
+  <strong>Create Review</strong>
+</p>
+
+<p align="center">
+  <img height="auto" width="400" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/create_review1.png">
+</p>
+<p align="center">
+  <img height="auto" width="400" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/create_review2.png">
+</p>
+<p align="center">
+  <img height="auto" width="400" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/create_review3.png">
+</p>
+
+<p align="center">
+  <strong>View Your Reviews</strong>
+</p>
+
+<p align="center">
+  <img height="auto" width="700" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/view_reviews.png">
+</p>
+
+<p align="center">
+  <strong>Update/Destroy Review</strong>
+</p>
+
+<p align="center">
+  <img height="auto" width="400" src="https://calcamper-seed.s3-us-west-1.amazonaws.com/edit_review.png">
+</p>
 
 # Coming Soon
 - Create listing saves feature

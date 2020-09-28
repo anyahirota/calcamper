@@ -33,66 +33,76 @@ import EditReviewFormContainer from "./reviews/edit_review_form_container";
 
 
 const App = () => (
-  <div>
-    <header>
-      <CovidBanner />
-      <Route path="/" component={NavBarContainer} />
-    </header>
-    <Route exact path="/" component={Splash} />
-    {/* <Route exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path="/demo" component={DemoFormContainer} /> */}
-    <Route exact path="/spots/camping" component={SpotIndexCampingContainer} />
-    <Route
-      exact
-      path="/spots/glamping"
-      component={SpotIndexGlampingContainer}
-    />
-    <Route exact path="/spots/rv" component={SpotIndexRVContainer} />
-    <Route exact path="/spots/bigsur" component={SpotIndexBigSurContainer} />
-    <Route
-      exact
-      path="/spots/deathvalleynationalpark"
-      component={SpotIndexDeathValleyContainer}
-    />
-    <Route
-      exact
-      path="/spots/joshuatreenationalpark"
-      component={SpotIndexJoshuaTreeContainer}
-    />
-    <Route
-      exact
-      path="/spots/kingscanyonnationalpark"
-      component={SpotIndexKingsContainer}
-    />
-    <Route
-      exact
-      path="/spots/lassenvolcanicnationalpark"
-      component={SpotIndexLassenContainer}
-    />
-    <Route
-      exact
-      path="/spots/tahoenationalforest"
-      component={SpotIndexTahoeContainer}
-    />
-    <Route
-      exact
-      path="/spots/yosemitenationalpark"
-      component={SpotIndexYosemiteContainer}
-    />
-    <ProtectedRoute exact path="/bookings" component={BookingIndexContainer} />
-    <ProtectedRoute
-      exact
-      path="/bookings/:id"
-      component={EditBookingFormContainer}
-    />
-    <Route exact path="/spot/:id" component={SpotShowContainer} />
-    <ProtectedRoute exact path="/reviews" component={ReviewIndexContainer} />
-    <ProtectedRoute
-      exact
-      path="/reviews/:id"
-      component={EditReviewFormContainer}
-    />
+  <div className="page-container">
+    <div className="content-wrap">
+      <header>
+        <CovidBanner />
+        <Route path="/" component={NavBarContainer} />
+      </header>
+      <Route exact path="/" component={Splash} />
+      {/* <Route exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
+          <Route exact path="/demo" component={DemoFormContainer} /> */}
+      <Route
+        exact
+        path="/spots/camping"
+        component={SpotIndexCampingContainer}
+      />
+      <Route
+        exact
+        path="/spots/glamping"
+        component={SpotIndexGlampingContainer}
+      />
+      <Route exact path="/spots/rv" component={SpotIndexRVContainer} />
+      <Route exact path="/spots/bigsur" component={SpotIndexBigSurContainer} />
+      <Route
+        exact
+        path="/spots/deathvalleynationalpark"
+        component={SpotIndexDeathValleyContainer}
+      />
+      <Route
+        exact
+        path="/spots/joshuatreenationalpark"
+        component={SpotIndexJoshuaTreeContainer}
+      />
+      <Route
+        exact
+        path="/spots/kingscanyonnationalpark"
+        component={SpotIndexKingsContainer}
+      />
+      <Route
+        exact
+        path="/spots/lassenvolcanicnationalpark"
+        component={SpotIndexLassenContainer}
+      />
+      <Route
+        exact
+        path="/spots/tahoenationalforest"
+        component={SpotIndexTahoeContainer}
+      />
+      <Route
+        exact
+        path="/spots/yosemitenationalpark"
+        component={SpotIndexYosemiteContainer}
+      />
+      <ProtectedRoute
+        exact
+        path="/bookings"
+        component={BookingIndexContainer}
+      />
+      <ProtectedRoute
+        exact
+        path="/bookings/:id"
+        component={EditBookingFormContainer}
+      />
+      <Route exact path="/spot/:id" component={SpotShowContainer} />
+      <ProtectedRoute exact path="/reviews" component={ReviewIndexContainer} />
+      <ProtectedRoute
+        exact
+        path="/reviews/:id"
+        component={EditReviewFormContainer}
+      />
+    </div>
     <Footer />
   </div>
 );

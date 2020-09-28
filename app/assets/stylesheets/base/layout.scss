@@ -6,3 +6,13 @@ html {
 .hidden {
     display: none;
 }
+
+.page-container {
+	position: relative;
+	min-height: 100vh;
+	padding-bottom: 60px;
+}
+
+.content-wrap {
+	padding-bottom: 2.5rem;
+}
